@@ -115,9 +115,9 @@
 						"text":"<a href=\"material/scrap_out_list.php?NmMenu=Material Out Book\" target=\"content\">Material Out Book</a>"
 					},{  
 						
-						"text":"<a href=\"material/scrap_prod_result_list.php?NmMenu=WIP In\" target=\"content\">WIP In</a>"
+						"text":"<a href=\"material/wip_inout_list.php?NmMenu=WIP In&type=I\" target=\"content\">WIP In</a>"
 					},{  
-						"text":"<a href=\"material/wip_out_list.php?NmMenu=WIP Out\" target=\"content\">WIP Out</a>"	
+						"text":"<a href=\"material/wip_inout_list.php?NmMenu=WIP Out&type=O\" target=\"content\">WIP Out</a>"	
 					},{ 
 						"text":"<a href=\"material/fg_prod_result_list.php?NmMenu=FG Production Result\" target=\"content\">FG Production Result</a>"
 					},{ 

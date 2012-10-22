@@ -38,6 +38,10 @@ function setdg(){
 		]],
 		url: '<?php echo $basedir; ?>models/material/mutasi_fg_grid.php?mat_type=0&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'),
 	});
-	<?php /*openurl('<?php echo $basedir; ?>models/material/mutasi_fg_grid.php?mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));*/ ?>
 }
+
+function showPrint(){
+	openurl('mutasi_fg_list_pdf.php?NmMenu=Laporan Pertanggungjawaban<br>Mutasi Barang Jadi&mat_type=0&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));
+}
+
 </script>	

@@ -41,6 +41,7 @@ $date2=date("d/m/Y");
     <input type="text" class="easyui-datebox" id="date1" name="date1" style="width:100px" value="<?php echo $date1?>"> to
     <input type="text" class="easyui-datebox" id="date2" name="date2" style="width:100px" value="<?php echo $date2?>">
     <a href="#" id="dtlCri" class="easyui-linkbutton" iconCls="icon-search"></a>
+    <a href="#" class="easyui-linkbutton" iconCls="icon-pdf" onClick="showPrint();">Printable</a>        
 </div>
 </body> 
 </html>

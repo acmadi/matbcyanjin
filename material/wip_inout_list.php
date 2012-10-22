@@ -4,7 +4,7 @@ require_once "sessions.php";
 require_once "pdocon.php";
 
 $NmMenu=$_REQUEST["NmMenu"];
-$TpBarang=$_REQUEST["TpBarang"];
+$type=$_REQUEST["type"];
 ?>
 <html>
 <head>
@@ -16,15 +16,12 @@ $TpBarang=$_REQUEST["TpBarang"];
 <script type="text/javascript" src="<?php echo $basedir ?>models/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $basedir ?>models/js/jquery-ui-1.8.4.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/jquery.grid.min.js"></script>
-<script type="text/javascript" src="<?php echo $basedir; ?>models/js/datagrid-detailview.js"></script>
+<script type="text/javascript" src="<?php echo $basedir; ?>models/js/datagrid-detailview.js"></script> 
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/global.format.js">disableSelection(document.body); 
 </script>
 <?php 
-require_once "mutasi_mat_pilap.mjs.php";
+require_once "wip_inout_list.mjs.php";
 require_once "mst_list.cjs.php";
-
-$date1="01/".date("m/Y");
-$date2=date("d/m/Y");
 ?>
 <style type="text/css">
 .kolom2 {	float:left;
@@ -37,11 +34,14 @@ $date2=date("d/m/Y");
 <table id="dg" singleSelect="true"></table>         
 </div>       
 <div id="toolCari">  
-    Search Date: From     
-    <input type="text" class="easyui-datebox" id="date1" name="date1" style="width:100px" value="<?php echo $date1?>"> to
-    <input type="text" class="easyui-datebox" id="date2" name="date2" style="width:100px" value="<?php echo $date2?>">
+    Search
+     <select id="pilcari" name="pilcari">
+    	<option value="wh_name">Warehouse</option>
+        <option value="date">Date</option>
+    </select> 
+    <input type="text" id="txtcari" name="txtcari" style="width:100px">
+    <input type="hidden" id="type" name="type" value="<?php echo $type; ?>">
     <a href="#" id="dtlCri" class="easyui-linkbutton" iconCls="icon-search"></a>
-    <a href="#" class="easyui-linkbutton" iconCls="icon-pdf" onClick="showPrint();">Printable</a>        
 </div>
 </body> 
 </html>

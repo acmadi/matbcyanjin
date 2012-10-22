@@ -38,6 +38,10 @@ function setdg(){
 		]],
 		url: '<?php echo $basedir; ?>models/material/mutasi_mat_grid.php?mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'),
 	});
-	<?php /*openurl('<?php echo $basedir; ?>models/material/mutasi_grid.php?mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));*/ ?>
 }
+
+function showPrint(){
+	openurl('mutasi_mat_list_pdf.php?NmMenu=Laporan Pertanggunjawaban<br>Mutasi Bahan Baku dan Bahan Penolong&mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));
+}
+
 </script>	
