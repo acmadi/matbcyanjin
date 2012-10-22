@@ -17,7 +17,13 @@ function setdg(){
 			{field:'supl_do',title:'Seller DO No.',width:80},
 			{field:'supl_inv',title:'Seller Inv. No.',width:80},
 			{field:'currency',title:'Currency',width:80},
-			{field:'notes',title:'Notes',width:80}
+			{field:'notes',title:'Notes',width:80},
+			{field:'action',title:'Action',width:80,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'matin_pdf.php?NmMenu=Incoming Material&matin_id='+row.matin_id+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/material/matin_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  
@@ -39,7 +45,7 @@ function setdg(){
 					{field:'Sat2',title:'Unit',width:80}, 
 					{field:'qty',title:'Quantity',width:100,align:'right'},
 					{field:'price',title:'Price',width:100,align:'right'},
-					{field:'amount',title:'Amount',width:100}  
+					{field:'amount',title:'Amount',width:100,align:'right'}  
 				]],  
 				onResize:function(){  
 					$('#dg').datagrid('fixDetailRowHeight',index);  
@@ -53,5 +59,11 @@ function setdg(){
 			$('#dg').datagrid('fixDetailRowHeight',index);
 		}
 	});
+}
+
+function showPrint(){
+	pilcari=$("#pilcari").val();
+	txtcari=$("#txtcari").val();
+	openurl('matin_list_pdf.php?NmMenu=Incoming Material List&pilcari='+pilcari+'&txtcari='+txtcari);
 }
 </script>	

@@ -4,15 +4,15 @@ require_once "pdocon.php";
 require_once "function.php";
 
 $req = $_REQUEST["req"];
+$type = $_REQUEST["type"];
 
-if ($req=='menu'){
-	$type = $_REQUEST["type"];
+if ($req=='menu'){	
 	$pilcari = $_REQUEST["pilcari"];
 	$txtcari = $_REQUEST["txtcari"];
 	$q = "SELECT DISTINCT a.wh_id,wh_name,DATE_FORMAT(date,'%d/%m/%Y') AS date
 		  FROM mat_stockcard a 
 		  LEFT JOIN mat_warehouse b ON b.wh_id=a.wh_id 
-		  WHERE type='$type' AND mat_type='2' ";
+		  WHERE type='$type' AND mat_type='11' ";
 	if ($txtcari != ""){		  
 		if ($pilcari == "date"){		  
 			$q .= "AND $pilcari LIKE '%".dmys2ymd($txtcari)."%' ";	  
@@ -33,7 +33,7 @@ if ($req=='menu'){
 	$q = "SELECT KdBarang AS KdBarang3,KdBarang AS KdBarang2,PartNo,NmBarang AS NmBarang2,HsNo AS HsNo2,Sat AS Sat2,FORMAT(qty, 2) AS qty
 		  FROM mst_barang a 
 		  LEFT JOIN mat_stockcard b ON mat_id = KdBarang 
-		  WHERE TpBarang='11' AND wh_id='$wh_id' AND date='$date'
+		  WHERE TpBarang='11' AND wh_id='$wh_id' AND date='$date' AND type='$type'
 		  ORDER BY mat_id ASC";
 }
 

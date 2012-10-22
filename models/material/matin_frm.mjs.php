@@ -95,6 +95,7 @@ function insert_menu(row){
 	$('#tl1Ubh').show();
 	$('#tl1Tbh').hide();	
 	$('#tl1Hps').show();
+	$('#btnPrint').show();
 }
 
 function insert_ref(row){
@@ -191,4 +192,11 @@ function simpan(){
 		}
 	}
 }
+
+function topdf(){
+	var matin_id = $('#matin_id').val();	
+	
+	openurl('<?=$basedir?>material/matin_pdf.php?NmMenu=<?=$NmMenu?>&matin_id='+matin_id);
+}
+
 </script>	

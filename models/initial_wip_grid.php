@@ -10,7 +10,7 @@ if ($req=='menu'){
 	$q = "SELECT DISTINCT a.wh_id,wh_name,DATE_FORMAT(date,'%d/%m/%Y') AS date
 		  FROM mat_stockcard a 
 		  LEFT JOIN mat_warehouse b ON b.wh_id=a.wh_id 
-		  WHERE type='B' AND mat_type='11' ";
+		  WHERE type='B' AND mat_type='11' AND type='B' ";
 	if ($pilcari != "")		  
 		$q .= "AND a.wh_id LIKE '%$pilcari%' ";	  
 	$q .= "ORDER BY wh_name, date ASC";
@@ -26,7 +26,7 @@ if ($req=='menu'){
 	$q = "SELECT KdBarang AS KdBarang3,KdBarang AS KdBarang2, NmBarang AS NmBarang2,HsNo AS HsNo2,Sat AS Sat2,FORMAT(qty, 2) AS qty, PartNo
 		  FROM mst_barang a 
 		  LEFT JOIN mat_stockcard b ON mat_id = KdBarang 
-		  WHERE TpBarang='11' AND wh_id='$wh_id' AND date='$date'
+		  WHERE TpBarang='11' AND wh_id='$wh_id' AND date='$date' AND type='B'
 		  ORDER BY mat_id ASC";
 }
 

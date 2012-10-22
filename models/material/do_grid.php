@@ -11,7 +11,7 @@ if ($req=='menu'){
 	$q = "SELECT *,DATE_FORMAT(do_date,'%d/%m/%Y') AS do_date, a.notes AS notes
 		  FROM mkt_dohdr a 
 		  LEFT JOIN mkt_sorderhdr b ON b.so_id=a.so_id ";
-	if ($pilcari != ""){		  
+	if ($txtcari != ""){		  
 		if ($pilcari == "do_date"){		  
 			$q .= "WHERE $pilcari LIKE '%".dmys2ymd($txtcari)."%' ";	  
 		} else {

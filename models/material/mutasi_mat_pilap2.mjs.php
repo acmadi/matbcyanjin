@@ -8,9 +8,9 @@ function setdg(){
 		fitColumns:false,
 		rownumbers:"true",
 		frozenColumns:[[  
-			{field:'KdBarang',title:'Part Code',width:80,rowspan:2},  
-			{field:'PartNo',title:'Part No.',width:80,rowspan:2}, 
-			{field:'NmBarang',title:'Part Name',width:100,rowspan:2},   
+			{field:'KdBarang',title:'Mat. Code',width:80,rowspan:2},  
+			//{field:'PartNo',title:'Part No.',width:80,rowspan:2}, 
+			{field:'NmBarang',title:'Desc.',width:100,rowspan:2},   
 			{field:'Sat',title:'Unit',width:50,rowspan:2}, 
 		]],
 		columns:[[  					
@@ -39,6 +39,9 @@ function setdg(){
 		]],
 		url: '<?php echo $basedir; ?>models/material/mutasi_mat_grid2.php?mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'),
 	});
-	/*openurl('<?php echo $basedir; ?>models/material/mutasi_fg_grid.php?mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));*/
+}
+
+function showPrint(){
+	openurl('mutasi_mat_list2_pdf.php?NmMenu=Stock Raw Material&mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));
 }
 </script>	

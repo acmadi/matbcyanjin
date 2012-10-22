@@ -29,7 +29,7 @@
 		"children":[{  
 				"text":"<a href=\"material/matgroup_frm.php?NmMenu=Material Group\" target=\"content\">Material Group</a>"    
 			},{
-				"text":"<a href=\"material/material_frm.php?NmMenu=Material&TpBarang=1\" target=\"content\">Material (Mat.)</a>"    
+				"text":"<a href=\"material/material_frm.php?NmMenu=Raw Material&TpBarang=1\" target=\"content\">Raw Material (RM)</a>"    
 			},{  
 				"text":"<a href=\"masterdata/barang2_frm.php?NmMenu=Finished Goods&TpBarang=0\" target=\"content\">Finished Goods (FG)</a>"
 			},{  
@@ -86,7 +86,7 @@
 				"text":"Data Master Report",    
 				"state":"closed",  
 				"children":[{
-						"text":"<a href=\"material/material_list.php?NmMenu=Material&TpBarang=1\" target=\"content\">Material</a>"    
+						"text":"<a href=\"material/material_list.php?NmMenu=Raw Material&TpBarang=1\" target=\"content\">Raw Material</a>"    
 					},{  
 						"text":"<a href=\"masterdata/barang2_list.php?NmMenu=Finished Goods&TpBarang=0\" target=\"content\">Finished Goods</a>"
 					},{  
@@ -96,7 +96,7 @@
 					},{
 						"text":"<a href=\"masterdata/initial_fg_list.php?NmMenu=Initial Balance Finished Goods\" target=\"content\">Initial Balance FG</a>"
 					},{  
-						"text":"<a href=\"masterdata/consumption_list.php?NmMenu=Consumption List\" target=\"content\">Consumption List</a>"									
+						"text":"<a href=\"masterdata/consumption_list.php?NmMenu=Consumption List\" target=\"content\">BOM</a>"									
 				}]
 			},{ 				
 				"text":"Transaction Report",
@@ -127,9 +127,9 @@
 					},{ 
 						"text":"<a href=\"material/stock_opname_list.php?NmMenu=Stock Opname Finished Goods\" target=\"content\">Stock Opname FG</a>"
 					},{ 
-						"text":"<a href=\"material/stock_adjustmat_list.php?NmMenu=Stock Adjustment\" target=\"content\">Stock Adjustment Mat.</a>"		
+						"text":"<a href=\"material/stock_adjustmat_list.php?NmMenu=Stock Adjustment Raw Material\" target=\"content\">Stock Adjustment Mat.</a>"		
 					},{ 
-						"text":"<a href=\"material/stock_adjust_list.php?NmMenu=Stock Adjustment\" target=\"content\">Stock Adjustment FG</a>"				
+						"text":"<a href=\"material/stock_adjust_list.php?NmMenu=Stock Adjustment Finished Goods\" target=\"content\">Stock Adjustment FG</a>"				
 					}]	
 			},{
 				"text":"Executive Report",

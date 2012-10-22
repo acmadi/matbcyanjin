@@ -51,6 +51,7 @@ function insert_menu(row){
 	$('#tl1Ubh').show();
 	$('#tl1Tbh').hide();	
 	$('#tl1Hps').show();
+	$('#btnPrint').show();
 }
 
 function setComboGrid(){	
@@ -146,4 +147,11 @@ function simpan(){
 		}
 	}
 }
+
+function topdf(){
+	var matout_id = $('#matout_id').val();	
+	
+	openurl('<?=$basedir?>material/matout_pdf.php?NmMenu=<?=$NmMenu?>&matout_id='+matout_id);
+}
+
 </script>	

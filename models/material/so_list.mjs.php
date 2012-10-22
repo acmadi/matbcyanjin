@@ -13,7 +13,13 @@ function setdg(){
 			{field:'cust',title:'Customer',width:80},
 			{field:'due_date',title:'Due Date',width:100},
 			{field:'currency',title:'Currency',width:80},
-			{field:'notes',title:'Notes',width:100}
+			{field:'notes',title:'Notes',width:100},
+			{field:'action',title:'Action',width:80,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'so_pdf.php?NmMenu=PO Customer&so_id='+row.so_id+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/material/so_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  
@@ -33,9 +39,9 @@ function setdg(){
 					{field:'PartNo',title:'Part No.',width:80}, 
 					{field:'NmBarang2',title:'Part Name',width:100}, 
 					{field:'Sat2',title:'Unit',width:80},   
-					{field:'qty',title:'Quantity',width:100},  
-					{field:'price',title:'Price',width:100},
-					{field:'amount',title:'Amount',width:100}  
+					{field:'qty',title:'Quantity',width:100,align:'right'},  
+					{field:'price',title:'Price',width:100,align:'right'},
+					{field:'amount',title:'Amount',width:100,align:'right'}  
 				]],  
 				onResize:function(){  
 					$('#dg').datagrid('fixDetailRowHeight',index);  
@@ -50,5 +56,11 @@ function setdg(){
 		}
 	});
 	
+}
+
+function showPrint(){
+	pilcari=$("#pilcari").val();
+	txtcari=$("#txtcari").val();
+	openurl('so_list_pdf.php?NmMenu=PO Customer List&pilcari='+pilcari+'&txtcari='+txtcari);
 }
 </script>	

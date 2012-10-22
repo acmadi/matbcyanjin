@@ -28,6 +28,9 @@ function setdg(){
 		]],
 		url: '<?php echo $basedir; ?>models/material/mutasi_fg_grid2.php?mat_type=0&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'),
 	});
-	/*openurl('<?php echo $basedir; ?>models/material/mutasi_fg_grid.php?mat_type=1&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));*/
+}
+
+function showPrint(){
+	openurl('mutasi_fg_list2_pdf.php?NmMenu=Stock Finished Goods&mat_type=0&date1='+$("#date1").datebox('getValue')+'&date2='+$("#date2").datebox('getValue'));
 }
 </script>	

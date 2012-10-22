@@ -104,7 +104,7 @@ require_once "matin_frm.cjs.php";
       <span class="kolom5">Incoming Date</span>
       <span class="kolom6">
       <input type="hidden" id="po_id" name="po_id">
-      <input type="text" id="matin_date" name="matin_date" class="easyui-datebox" required="true" maxlength="10" tabindex="10" style="width:100px">
+      <input type="text" id="matin_date" name="matin_date" class="easyui-datebox" required maxlength="10" tabindex="10" style="width:100px">
       </span>
     </div>    
     <div class="hdr">
@@ -124,13 +124,13 @@ require_once "matin_frm.cjs.php";
         ?>
       </select>
       </span>
-      <span class="kolom5">Seller DO No.</span>
+      <span class="kolom5">DO Seller No.</span>
       <span class="kolom6">
       <input type="text" id="supl_do" name="supl_do" style="width:100px">
       </span>      
     </div>
     <div class="hdr">
-      <span class="kolom1">Seller Inv. No.</span>
+      <span class="kolom1">Inv. Seller No.</span>
       <span class="kolom2">
       <input type="text" id="supl_inv" name="supl_inv" style="width:100px">
       </span>
@@ -179,6 +179,7 @@ require_once "matin_frm.cjs.php";
     <a href="javascript:void(0)" id="tl1Btl" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" title="Cancel">Cancel</a>  
     <a href="javascript:void(0)" id="tl1Sim" class="easyui-linkbutton" iconCls="icon-save" plain="true" title="Save">Save</a> 
     <a href="javascript:void(0)" id="tl1Cri" class="easyui-linkbutton" iconCls="icon-search" plain="true" title="Search">Search</a>  
+	<a href="javascript:void(0)" id="btnPrint" class="easyui-linkbutton" iconCls="icon-pdf" plain="true" title="Hapus">Printable</a>                  
 </div>
 
 <table id="dg" singleSelect="true"></table> 

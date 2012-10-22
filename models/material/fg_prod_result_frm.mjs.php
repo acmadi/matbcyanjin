@@ -59,11 +59,19 @@ function insert_menu(row){
 	$('#tl1Ubh').show();
 	$('#tl1Tbh').hide();		
 	$('#tl1Hps').show();
+	$('#btnPrint').show();	
 }
 
 function insert_det(row){
 	$('#PartNo').val(row.PartNo);
 	$('#NmBarang2').val(row.NmBarang2);
 	$('#Sat2').val(row.Sat2);
+}
+
+function topdf(){
+	var wh_id = $('#wh_id0').val();	
+	var date = $('#date').datebox('getValue');
+	
+	openurl('<?=$basedir?>material/fg_prod_result_pdf.php?NmMenu=<?=$NmMenu?>&wh_id='+wh_id+'&date='+date);
 }
 </script>	

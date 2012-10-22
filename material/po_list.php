@@ -43,6 +43,7 @@ require_once "mst_list.cjs.php";
     </select> 
     <input type="text" id="txtcari" name="txtcari" style="width:100px">
     <a href="#" id="dtlCri" class="easyui-linkbutton" iconCls="icon-search"></a>
+    <a href="#" class="easyui-linkbutton" iconCls="icon-pdf" onClick="showPrint();">Printable</a>
 </div>
 </body> 
 </html>

@@ -62,7 +62,8 @@ function insert_menu(row){
 	$('#wCari').dialog('close');
 	$('#tl1Ubh').show();
 	$('#tl1Tbh').hide();	
-	$('#tl1Hps').show();	
+	$('#tl1Hps').show();
+	$('#btnPrint').show();		
 }
 
 function setComboGrid(){	
@@ -168,4 +169,11 @@ function simpan(){
 		}
 	}
 }
+
+function topdf(){
+	var do_id = $('#do_id').val();	
+	
+	openurl('<?=$basedir?>material/do_pdf.php?NmMenu=<?=$NmMenu?>&do_id='+do_id);
+}
+
 </script>	

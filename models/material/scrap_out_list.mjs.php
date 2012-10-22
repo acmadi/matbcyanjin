@@ -10,7 +10,14 @@ function setdg(){
 		columns:[[  		
 			{field:'matout_no',title:'MOB No.',width:100},
 			{field:'matout_date',title:'MOB Date',width:100},
-			{field:'ref_no',title:'Ref. No.',width:100}
+			{field:'ref_no',title:'Ref. No.',width:100},
+			{field:'notes',title:'Notes',width:100},
+			{field:'action',title:'Action',width:60,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'scrap_out_pdf.php?NmMenu=Material Out Book&matout_id='+row.matout_id+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/material/scrap_out_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  
@@ -45,4 +52,11 @@ function setdg(){
 		}
 	});
 }
+
+function showPrint(){
+	pilcari=$("#pilcari").val();
+	txtcari=$("#txtcari").val();
+	openurl('scrap_out_list_pdf.php?NmMenu=Material Out Book List&pilcari='+pilcari+'&txtcari='+txtcari);
+}
+
 </script>	

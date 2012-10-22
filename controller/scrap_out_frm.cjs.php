@@ -62,6 +62,7 @@ $('#tl1Ubh').hide();
 $('#tl1Hps').hide();
 $('#tl1Sim').hide();
 $('#tl1Btl').hide(); 
+$('#btnPrint').hide();
 
 $('#dlg').dialog({ 
 	title:"<?php echo strtoupper($NmMenu) ?>", 
@@ -114,7 +115,7 @@ $('#tl1Ubh').click(function(){
 	$('#date').datebox('enable');
 	setComboGrid();
 	$('#Sat2').attr('disabled',true);
-	
+	$('#btnPrint').hide();
 });
 
 $('#tl1Sim').click(function(){	
@@ -216,6 +217,10 @@ $('#tl1Btl').click(function(){
 
 $('#btnSubmit1').click(function(){
 	simpan();
+});
+
+$('#btnPrint').click(function(){
+	topdf();
 });
 //END TOOLBAR1
 

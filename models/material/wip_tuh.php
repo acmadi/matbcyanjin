@@ -33,7 +33,7 @@ try {
 				  kd_fac,wh_id,date,mat_type,mat_id,
 				  type,qty,qty_bal
 				  ) VALUES (
-				  '01','$wh_id','$date','2','$KdBarang2[$i]',
+				  '01','$wh_id','$date','11','$KdBarang2[$i]',
 				  '$type','$qty[$i]','$qty[$i]'
 				  )";	
 		}//AKHIR MANIPULASI DATA BARANG		
@@ -54,7 +54,7 @@ try {
 				  kd_fac,wh_id,date,mat_type,mat_id,
 				  type,qty,qty_bal
 				  ) VALUES (
-				  '01','$wh_id','$date','2','$KdBarang2[$i]',
+				  '01','$wh_id','$date','11','$KdBarang2[$i]',
 				  '$type','$qty[$i]','$qty[$i]'
 				  )";
 		}//AKHIR MANIPULASI DATA BARANG

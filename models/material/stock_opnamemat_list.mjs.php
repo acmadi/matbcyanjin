@@ -9,7 +9,13 @@ function setdg(){
 		rownumbers:"true",
 		columns:[[  		
 			{field:'wh_name',title:'Warehouse.',width:100},
-			{field:'opname_date',title:'Date',width:100}
+			{field:'opname_date',title:'Date',width:100},
+			{field:'action',title:'Action',width:80,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'stock_opnamemat_pdf.php?NmMenu=Stock Opname Raw Material&opname_id='+row.opname_id+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/material/stock_opnamemat_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  

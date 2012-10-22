@@ -14,6 +14,12 @@ function setdg(){
 			{field:'Sat',title:'Unit',width:80},
 			{field:'cust',title:'Customer',width:100},
 			{field:'Ket',title:'Remark',width:80},
+			{field:'action',title:'Action',width:80,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'consumption_pdf.php?KdBarang0='+row.KdBarang+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/consumption/consumption_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  

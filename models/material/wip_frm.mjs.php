@@ -17,7 +17,7 @@ function setdg(){
 			{field:'Sat2',title:'Unit',width:80},
 			{field:'qty',title:'Qty.',width:100,align:'right'}
 		]],
-		url: '<?php echo $basedir; ?>models/material/wip_grid.php?req=list&wh_id='+wh_id+'&date='+date,  
+		url: '<?php echo $basedir; ?>models/material/wip_grid.php?req=list&type='+$("#type").val()+'&wh_id='+wh_id+'&date='+date,  
 		saveUrl: '',  
 		updateUrl: '',  
 		destroyUrl: '',
@@ -59,6 +59,7 @@ function insert_menu(row){
 	$('#tl1Ubh').show();
 	$('#tl1Tbh').hide();		
 	$('#tl1Hps').show();
+	$('#btnPrint').show();
 }
 
 function insert_det(row){
@@ -66,4 +67,12 @@ function insert_det(row){
 	$('#NmBarang2').val(row.NmBarang2);
 	$('#Sat2').val(row.Sat2);
 }
+
+function topdf(){
+	var wh_id = $('#wh_id0').val();	
+	var date = $('#date').datebox('getValue');
+	
+	openurl('<?=$basedir?>material/wip_pdf.php?NmMenu=<?=$NmMenu?>&type='+$("#type").val()+'&wh_id='+wh_id+'&date='+date);
+}
+
 </script>	

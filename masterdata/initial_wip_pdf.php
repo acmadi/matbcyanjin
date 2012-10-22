@@ -128,7 +128,7 @@ $q = "SELECT wh_name,DATE_FORMAT(date,'%d/%m/%Y') AS date,KdBarang AS KdBarang3,
 	  FROM mst_barang a 
 	  LEFT JOIN mat_stockcard b ON mat_id = KdBarang 
 	  LEFT JOIN mat_warehouse c ON c.wh_id=b.wh_id  
-	  WHERE TpBarang='11' AND b.wh_id='$wh_id' AND date='$date'
+	  WHERE TpBarang='11' AND b.wh_id='$wh_id' AND date='$date' AND type='B'
 	  ORDER BY mat_id ASC";
 $run=$pdo->query($q);	
 $rs=$run->fetchAll(PDO::FETCH_ASSOC);

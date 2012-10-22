@@ -24,7 +24,13 @@ function setdg(){
 			{field:'dlv_date',title:'Delivery Date',width:80},
 			{field:'wh_name',title:'Warehouse',width:80},
 			{field:'remark',title:'Remark',width:80},
-			{field:'auth_sign',title:'Auth. Sign.',width:80}
+			{field:'auth_sign',title:'Auth. Sign.',width:80},
+			{field:'action',title:'Action',width:80,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'po_pdf.php?NmMenu=Purchase Order&po_id='+row.po_id+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/material/po_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  
@@ -60,4 +66,11 @@ function setdg(){
 		}
 	});
 }
+
+function showPrint(){
+	pilcari=$("#pilcari").val();
+	txtcari=$("#txtcari").val();
+	openurl('po_list_pdf.php?NmMenu=PO Customer List&pilcari='+pilcari+'&txtcari='+txtcari);
+}
+
 </script>	

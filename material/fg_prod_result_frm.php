@@ -65,7 +65,7 @@ require_once "fg_prod_result_frm.cjs.php";
       <span class="kolom3">Date </span>
       <span class="kolom4">
       	<input type="hidden" id="date0" name="date0">
-        <input type="text" id="date" name="date" class="easyui-datebox" required="true" maxlength="10" tabindex="10" style="width:100px">
+        <input type="text" id="date" name="date" class="easyui-datebox" required maxlength="10" tabindex="10" style="width:100px">
       </span>
     </div>
 
@@ -76,6 +76,7 @@ require_once "fg_prod_result_frm.cjs.php";
     <a href="javascript:void(0)" id="tl1Btl" class="easyui-linkbutton" iconCls="icon-cancel" plain="true" title="Cancel">Cancel</a>  
     <a href="javascript:void(0)" id="tl1Sim" class="easyui-linkbutton" iconCls="icon-save" plain="true" title="Save">Save</a> 
     <a href="javascript:void(0)" id="tl1Cri" class="easyui-linkbutton" iconCls="icon-search" plain="true" title="Search">Search</a>  
+	<a href="javascript:void(0)" id="btnPrint" class="easyui-linkbutton" iconCls="icon-pdf" plain="true" title="Hapus">Printable</a>                  
 </div>
 
 <table id="dg" singleSelect="true"></table> 

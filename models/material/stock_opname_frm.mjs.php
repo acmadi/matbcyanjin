@@ -49,6 +49,7 @@ function insert_menu(row){
 	$('#tl1Ubh').show();
 	$('#tl1Tbh').hide();	
 	$('#tl1Hps').show();
+	$('#btnPrint').show();	
 }
 
 function insert_det(row){
@@ -56,4 +57,11 @@ function insert_det(row){
 	$('#NmBarang2').val(row.NmBarang2);
 	$('#Sat2').val(row.Sat2);
 }
+
+function topdf(){
+	var opname_id = $('#opname_id').val();	
+	
+	openurl('<?=$basedir?>material/stock_opname_pdf.php?NmMenu=<?=$NmMenu?>&opname_id='+opname_id);
+}
+
 </script>	

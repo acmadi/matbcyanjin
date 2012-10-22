@@ -9,7 +9,13 @@ function setdg(){
 		rownumbers:"true",
 		columns:[[  		
 			{field:'wh_name',title:'Warehouse.',width:100},
-			{field:'date',title:'Date',width:100}
+			{field:'date',title:'Date',width:100},
+			{field:'action',title:'Action',width:80,
+				formatter:function(value,row,index){
+					var det = '<a href="#" onclick="window.open(\'fg_prod_result_pdf.php?NmMenu=Finished Goods Production Result&wh_id='+row.wh_id+'&date='+row.date+'\', \'_blank\');"><img src="<?php echo $basedir ?>themes/icons/pdf.png"></a>';
+					return det;					
+				}
+			}
 		]],
 		url: '<?php echo $basedir; ?>models/material/fg_prod_result_grid.php?req=menu&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val(),
 		view: detailview,  
@@ -45,4 +51,11 @@ function setdg(){
 		}
 	});
 }
+
+function showPrint(){
+	pilcari=$("#pilcari").val();
+	txtcari=$("#txtcari").val();
+	openurl('so_list_pdf.php?NmMenu=PO Customer List&pilcari='+pilcari+'&txtcari='+txtcari);
+}
+
 </script>	

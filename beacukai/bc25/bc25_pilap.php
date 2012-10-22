@@ -21,6 +21,8 @@ $NmMenu=$_REQUEST["NmMenu"];
 <script type="text/javascript" src="<?php echo $basedir ?>models/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $basedir ?>models/js/jquery-ui-1.8.4.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/jquery.grid.min.js"></script>
+<script type="text/javascript" src="<?php echo $basedir; ?>models/js/global.format.js">disableSelection(document.body);
+</script>
 <script type="text/javascript">
 <?php 
 $q="SELECT * FROM tujuan_pengiriman ORDER BY KdTp";
@@ -80,7 +82,7 @@ function cari(){
 }
 </script>
 </head>
-<body>
+<body oncontextmenu="return false;">
 	<table id="dg" class="easyui-datagrid" style="width:1000;height:500px"			
 			toolbar="#tb" pagination="true" pageList="[25,50,75,100]"
 			rownumbers="true" fitColumns="true">

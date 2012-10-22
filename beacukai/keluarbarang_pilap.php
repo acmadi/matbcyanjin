@@ -19,6 +19,8 @@ require_once "pdocon.php";
 <script type="text/javascript" src="<?php echo $basedir ?>models/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $basedir ?>models/js/jquery-ui-1.8.4.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/jquery.grid.min.js"></script>
+<script type="text/javascript" src="<?php echo $basedir; ?>models/js/global.format.js">disableSelection(document.body);
+</script>
 <script type="text/javascript">
 <?php 
 $q="SELECT * FROM tujuan_pengiriman ORDER BY KdTp";
@@ -110,7 +112,7 @@ function toExcel(){
 }
 </script>
 </head>
-<body>
+<body oncontextmenu="return false;">
 	<table id="dg" class="easyui-datagrid" toolbar="#tb"></table>
 	<div id="tb" style="padding:5px;height:auto">
 		<div>
