@@ -139,11 +139,11 @@
 					},{ 
 						"text":"<a href=\"material/mutasi_fg_pilap2.php?NmMenu=Stock Finished Goods\" target=\"content\">Stock FGS</a>"				
 					},{ 
-						"text":"<a href=\"material/mutasi_fg_pilap2.php?NmMenu=Stock Work In Process\" target=\"content\">Stock WIP</a>"				
+						"text":"<a href=\"material/mutasi_wip_pilap2.php?NmMenu=Stock Work In Process\" target=\"content\">Stock WIP</a>"				
 					},{ 
-						"text":"<a href=\"material/mutasi_fg_pilap2.php?NmMenu=PO Balance Customer\" target=\"content\">PO Balance Cust.</a>"				
+						"text":"<a href=\"material/so_balance_list.php?NmMenu=PO Balance Customer\" target=\"content\">PO Balance Cust.</a>"				
 					},{ 
-						"text":"<a href=\"material/mutasi_fg_pilap2.php?NmMenu=PO Balance Supplier\" target=\"content\">PO Balance Supplier</a>"							
+						"text":"<a href=\"material/po_balance_list.php?NmMenu=PO Balance Supplier\" target=\"content\">PO Balance Supplier</a>"							
 				
 				}]
 			}]		
@@ -211,7 +211,7 @@
 		},{  
 			"text":"<a href=\"beacukai/keluarbarang_pilap.php?NmMenu=LAPORAN PENGELUARAN BARANG PER DOKUMEN PABEAN\" target=\"content\">Pengeluaran Barang</a>"
 		},{  
-			"text":"<a href=\"material/wip_pilap.php?NmMenu=LAPORAN POSISI BARANG DALAM PROSES (WIP)\" target=\"content\">WIP</a>"
+			"text":"<a href=\"material/mutasi_wip_pilap.php?NmMenu=LAPORAN POSISI BARANG DALAM PROSES (WIP)\" target=\"content\">WIP</a>"
 		},{
 			"text":"<a href=\"material/mutasi_mat_pilap.php?NmMenu=LAPORAN PERTANGGUNGJAWABAN MUTASI BAHAN BAKU DAN BAHAN PENOLONG\" target=\"content\">Mutasi Barang Baku dan Bahan Penolong</a>"
 		},{
