@@ -11,7 +11,7 @@ if ($req=='menu') {
 	$q = "SELECT *,DATE_FORMAT(opname_date,'%d/%m/%Y') AS opname_date
 		  FROM mat_opnamehdr a
 		  LEFT JOIN mat_warehouse b ON b.wh_id=a.wh_id 
-		  WHERE mat_type='1' AND status='1' ";
+		  WHERE mat_type NOT IN ('0','11') AND status='1' ";
 	if ($txtcari != ""){		  
 		if ($pilcari == "opname_date"){		  
 			$q .= "AND $pilcari LIKE '%".dmys2ymd($txtcari)."%' ";	  
@@ -31,7 +31,7 @@ if ($req=='menu') {
 		  FROM mat_opnamedet a 
 		  LEFT JOIN mst_barang b ON KdBarang = mat_id 
 		  LEFT JOIN mat_opnamehdr c ON c.opname_id=a.opname_id
-		  WHERE c.mat_type='1' AND c.status='1' AND c.wh_id = '".$wh_id."' AND opname_date BETWEEN '$opname_date1' AND '$opname_date2' 
+		  WHERE c.mat_type NOT IN ('0','11') AND c.status='1' AND c.wh_id = '".$wh_id."' AND opname_date BETWEEN '$opname_date1' AND '$opname_date2' 
 		  ORDER BY child_no ASC";
 } else if ($req=='listrpt') {	
 	$opname_id = $_REQUEST["opname_id"];
@@ -58,7 +58,7 @@ if ($req=='menu') {
 		  FROM mat_opnamedet a 
 		  LEFT JOIN mst_barang b ON KdBarang = mat_id 
 		  LEFT JOIN mat_opnamehdr c ON c.opname_id=a.opname_id
-		  WHERE c.mat_type='1' AND c.wh_id = '".$wh_id."' AND opname_date BETWEEN '$opname_date1' AND '$opname_date2' 
+		  WHERE c.mat_type NOT IN ('0','11') AND c.wh_id = '".$wh_id."' AND opname_date BETWEEN '$opname_date1' AND '$opname_date2' 
 		  ORDER BY child_no ASC";
 }
 

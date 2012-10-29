@@ -59,9 +59,15 @@ function setdgCari(){
 }
 
 function setComboGrid(){
+	po_id = $('#po_id').val();
+	if (po_id == ''){
+		url = '<?php echo $basedir; ?>models/material/matin_grid.php?req=dgDetFirst';
+	} else {
+		url = '<?php echo $basedir; ?>models/material/matin_grid.php?req=dgDet&po_id='+$('#po_id').val();
+	}
 	$('#KdBarang2').combogrid({  
 		panelWidth:500,  	
-		url: '<?php echo $basedir; ?>models/material/matin_grid.php?req=dgDet&po_id='+$('#po_id').val(),  
+		url: url,  
 		idField:'KdBarang2',  
 		textField:'KdBarang2',  
 		mode:'remote',  
@@ -129,10 +135,10 @@ function simpan(){
 		throw "matin_type-Incoming Type";
 	} else if ($('#matin_date').datebox('getValue') == ''){ 
 		throw "matin_date-Incoming Date";
-	} else if ($('#currency').val() == ''){	
+	/*} else if ($('#currency').val() == ''){	
 		throw "currency-Currency";
 	} else if ($('#supplier').val() == ''){	
-		throw "supplier-Seller";
+		throw "supplier-Seller";*/
 	} else if (rows.length == 0){
 		throw "matin_no-Finished Goods List";	
 	} else {

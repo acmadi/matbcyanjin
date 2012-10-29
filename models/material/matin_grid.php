@@ -34,6 +34,11 @@ if ($req=='menu'){
 		  LEFT JOIN mst_barang b ON KdBarang = mat_id 
 		  WHERE po_id='$po_id' 
 		  ORDER BY child_no ASC";
+} else if ($req=='dgDetFirst') {
+	$q = "SELECT KdBarang AS KdBarang3,KdBarang AS KdBarang2, NmBarang AS NmBarang2,HsNo AS HsNo2,Sat AS Sat2
+		  FROM mst_barang  
+		  WHERE TpBarang='12' 
+		  ORDER BY KdBarang ASC";		  
 } else if ($req=='dgRef') {	
 	$q = "SELECT *,DATE_FORMAT(po_date,'%d/%m/%Y') AS po_date,DATE_FORMAT(dlv_date,'%d/%m/%Y') AS dlv_date
 		  FROM pur_pohdr WHERE po_type='0' ";

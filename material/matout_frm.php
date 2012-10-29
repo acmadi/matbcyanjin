@@ -35,11 +35,11 @@ if ($rs){
 }
 .kolom3 {
 	float:left;
-	width:100px;	
+	width:90px;	
 }
 .kolom4 {
 	float:left;
-	width:120px;	
+	width:160px;	
 }
 .kolom5 {
 	float:left;
@@ -84,8 +84,18 @@ require_once "matout_frm.cjs.php";
         ?>
        </select>
       </span>
-      <span class="kolom5"></span>
-      <span class="kolom6"></span>
+      <span class="kolom5">Jenis BC</span>
+      <span class="kolom6">
+      <select name="KdJnsDok" id="KdJnsDok" style="width:80px">
+        <option value=""></option>
+        <?php
+            $run = $pdo->query("SELECT * FROM jenis_dok WHERE KdJnsDok IN ('4','6','9') ORDER BY KdJnsDok");
+            $rs = $run->fetchAll(PDO::FETCH_ASSOC);
+            foreach($rs as $r)
+                echo "<option value=\"".$r['KdJnsDok']."\">".$r['UrJnsDok']."</option>";
+        ?>
+      </select>
+      </span>
     </div> 
     <div class="hdr">
       <span class="kolom1">Outgoing Date</span>

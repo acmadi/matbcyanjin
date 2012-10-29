@@ -1,7 +1,7 @@
 <script type="text/javascript">
 $(function(){
 
-
+$('#ref').hide();
 $('#w').window({ 
 	title:"FORM <?php echo strtoupper($NmMenu) ?>", 
     width:770,
@@ -32,6 +32,7 @@ $('#btnTbh').click(function(){
 	enInput();
 	setdg();
 	setdg2();	
+	$('#ref').show();
 });
  
 $('#btnUbh').click(function(){

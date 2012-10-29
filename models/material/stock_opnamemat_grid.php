@@ -31,7 +31,7 @@ if ($req=='menu'){
 	$q = "SELECT KdBarang AS KdBarang3,KdBarang AS KdBarang2, PartNo, NmBarang AS NmBarang2,HsNo AS HsNo2,Sat AS Sat2
 		  FROM mst_barang a 
 		  LEFT JOIN mst_jenisbarang b ON KdJnsBarang=TpBarang 
-		  WHERE TpBarang='1'
+		  WHERE TpBarang NOT IN ('0','11')
 		  ORDER BY TpBarang, KdBarang ASC";
 }
 

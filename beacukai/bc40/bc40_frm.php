@@ -44,12 +44,17 @@ $NoDaf = "000.".str_pad($autonodaf, 3, "0", STR_PAD_LEFT);
 require_once "bc40.mjs.php";
 require_once "bc40.cjs.php";
 ?>
-<body>
 <body oncontextmenu="return false;">
 <div id="w" style="padding:5px;">
 <form id="frm" name="frm" action="" method="post">
     <div class="easyui-tabs" tools="#tab-tools" style="width:710px;height:470px;">               
         <div title="Data Umum" style="padding:10px;">
+        <div id="ref">
+          <select id="matin_id" name="matin_id">
+            <option value=""></option>
+          </select>
+        </div>
+
         <table>        
         <tr>        
           <td>                    	        	        

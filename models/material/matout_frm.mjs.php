@@ -74,8 +74,7 @@ function setComboGrid(){
 
 
 function insert_ref(row){
-	$('#wo_id').val(row.wo_id);	
-	setComboGrid();
+	$('#wo_id').val(row.wo_id);		
 }
 
 function insert_det(row){
@@ -92,8 +91,8 @@ function simpan(){
 		throw "matout_no-Outgoing No.";
 	} else if ($('#matout_date').datebox('getValue') == ''){ 
 		throw "matout_date-Outgoing Date";
-	} else if ($('#wo_id').val() == ''){	
-		throw "wo_no-WO No.";
+	/*} else if ($('#wo_id').val() == ''){	
+		throw "wo_no-WO No.";*/
 	} else if (rows.length == 0){
 		throw "matout_no-Finished Goods List";	
 	} else {

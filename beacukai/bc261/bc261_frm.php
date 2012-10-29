@@ -38,11 +38,13 @@ $NoDaf = "000.".str_pad($autonodaf, 3, "0", STR_PAD_LEFT);
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/commonFormat.js"></script>
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/date.format.js"></script>
 <script type="text/javascript" src="<?php echo $basedir; ?>models/js/jquery.maskedinput-1.3.js"></script>    
+<script type="text/javascript" src="<?php echo $basedir; ?>models/js/global.format.js">disableSelection(document.body); 
+</script>
 <?php 
 require_once "bc261.mjs.php";
 require_once "bc261.cjs.php";
 ?>
-<body>
+<body oncontextmenu="return false;" leftmargin="20" rightmargin="20" topmargin="15" bottommargin="20"> 
 <div id="w" style="padding:5px;">
 <form id="frm" name="frm" action="" method="post">
     <div class="easyui-tabs" tools="#tab-tools" style="width:710px;height:470px;">               

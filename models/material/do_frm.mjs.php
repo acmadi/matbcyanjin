@@ -9,14 +9,20 @@ function setdg(){
 		toolbar:"#toolbar2",
 		fitColumns:"true",
 		rownumbers:"true",
-		columns:[[  
+		columns:[[  		
 			{field:'KdBarang2',title:'Part Code',width:80},
 			{field:'PartNo',title:'Part No.',width:100},
 			{field:'NmBarang2',title:'Part Name',width:150},
-			{field:'Sat2',title:'Unit',width:80},
-			{field:'qty',title:'Qty.',width:100,align:'right'},
+			{field:'Sat2',title:'Unit',width:60},
+			{field:'qty_so',title:'Qty. PO Cust.',width:100,align:'right'},
+			{field:'qty_bal',title:'Qty. Balance',width:100,align:'right'},
+			{field:'qty',title:'Qty. DO',width:100,align:'right'},
 			{field:'price',title:'Price',width:100,align:'right'},
-			{field:'amount',title:'Amount',width:100,align:'right'}
+			{field:'amount',title:'Amount',width:100,align:'right',formatter:function(value){
+				amount=parseFloat(value);
+				amount=amount.toFixed(2);
+				return amount;
+			}}
 		]],
 		url: '<?php echo $basedir; ?>models/material/do_grid.php?req=list&do_id='+do_id
 	});
@@ -24,10 +30,28 @@ function setdg(){
 
 function setdgUrl(){
 	var so_id = $('#so_id').val();
-	
-	$('#dg').datagrid({ 
-		url: '<?php echo $basedir; ?>models/material/do_grid.php?req=dgDet&so_id='+so_id	
+	var do_id = $('#do_id').val();
+	$('#dg').datagrid({ 		
+		url: '<?php echo $basedir; ?>models/material/do_grid.php?req=dgDet&so_id='+so_id+'&do_id='+do_id	
 	});
+}
+
+function set_sono(row){	
+	$('#so_no').combogrid({  
+		panelWidth:500,  	
+		url: '<?php echo $basedir; ?>models/material/do_grid.php?req=so&KdBarang='+row.KdBarang,  
+		idField:'so_no',  
+		textField:'so_no',  
+		mode:'remote',  
+		fitColumns:true,  
+		columns:[[  
+			{field:'so_no',title:'PO Cust. No.',width:50},
+			{field:'so_date',title:'PO Date',width:50},
+			{field:'cust',title:'Customer',width:50},
+			{field:'due_date',title:'Due Date',width:50}
+		]],
+		onClickRow:function(index,row){insert_ref(row)}  
+	}); 
 }
 
 function setdgCari(){	
@@ -100,6 +124,8 @@ function insert_det(row){
 	$('#PartNo').val(row.PartNo);
 	$('#NmBarang2').val(row.NmBarang2);
 	$('#Sat2').val(row.Sat2);
+	$('#qty_so').numberbox('setValue',row.qty_so);
+	$('#qty_bal').numberbox('setValue',row.qty_bal);
 	$('#qty').numberbox('setValue',row.qty);
 	$('#price').numberbox('setValue',row.price);
 }

@@ -10,7 +10,7 @@ if ($req=='menu'){
 	$q = "SELECT DISTINCT mat_type,JnsBarang,DATE_FORMAT(date,'%d/%m/%Y') AS date
 		  FROM mat_stockcard a 
 		  LEFT JOIN mst_jenisbarang b ON b.KdJnsBarang=a.mat_type
-		  WHERE type='B' AND mat_type IN ('3','5') ";
+		  WHERE type='B' AND mat_type IN ('3','5','12') ";
 	if ($txtcari != ""){		  
 			$q .= "AND mat_type LIKE '%$txtcari%' ";	  
 	}  

@@ -81,8 +81,8 @@ $('#po_no').combogrid({
 		{field:'dlv_date',title:'Dlv Date',width:50}
 	]],
 	onClickRow:function(index,row){insert_ref(row);}  
-}); 
-	
+});
+
 setdg();
 dsInput();
 $('#date').combo('disable');
@@ -129,6 +129,7 @@ $('#tl1Tbh').click(function(){
 	
 	enInput();
 	$('#date').datebox('enable');
+	setComboGrid();
 	$('#po_no').combogrid('enable');
 	$('#Sat2').attr('disabled',true);
 });

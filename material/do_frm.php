@@ -76,18 +76,19 @@ require_once "do_frm.cjs.php";
       <span class="kolom4">
         <input type="text" id="do_date" name="do_date" class="easyui-datebox" required maxlength="10" tabindex="10" style="width:100px">
       </span>
-      <span class="kolom5">PO Cust. No. </span>
+      <span class="kolom5">Part No.</span>
       <span class="kolom6">
-      <input type="hidden" id="so_id" name="so_id" style="width:100px">
-      <select name="so_no" id="so_no" style="width:150px"></select></span>
+      <select name="PartNo" id="PartNo" style="width:150px"></select></span>
     </div>        
     <div class="hdr">
       <span class="kolom1">Vehicle No.</span>
       <span class="kolom2"><input type="text" name="vehicle_no" id="vehicle_no" style="width:100px"></span>
       <span class="kolom3">Driver</span>
       <span class="kolom4"><input type="text" name="driver" id="driver" style="width:100px"></span>
-      <span class="kolom5"></span>
-      <span class="kolom6"></span>
+       <span class="kolom5">PO Cust. No. </span>
+      <span class="kolom6">
+      <input type="hidden" id="so_id" name="so_id" style="width:100px">
+      <select name="so_no" id="so_no" style="width:150px"></select></span>
     </div>
     <!--
     <div class="hdr">
@@ -153,7 +154,15 @@ require_once "do_frm.cjs.php";
       </td>
     </tr>
     <tr>
-      <td>Quantity</td>
+      <td>Qty. PO Cust.</td>
+      <td><input name="qty_so" type="text" id="qty_so" value="" style="width:100px" readonly></td>
+    </tr>
+    <tr>
+      <td>Qty. Balance</td>
+      <td><input name="qty_bal" type="text" id="qty_bal" value="" style="width:100px" readonly></td>
+    </tr>
+    <tr>
+      <td>Qty. DO</td>
       <td><input name="qty" type="text" id="qty" value="" style="width:100px"></td>
     </tr>
     <tr>

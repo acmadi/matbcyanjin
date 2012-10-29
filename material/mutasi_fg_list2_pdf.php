@@ -185,7 +185,7 @@ $html .= '<tr>'.
 		 '<td align="right">'.$r['qty_beg'].'</td>'.
 		 '<td align="right">'.$r['qty_in'].'</td>'.
 		 '<td align="right">'.$r['qty_out'].'</td>'.
-		 '<td align="right">'.$qty_end.'</td>'.
+		 '<td align="right">'.number_format($qty_end,2).'</td>'.
 		 '<td></td>'.
 		 '</tr>';
 $no+=1;	

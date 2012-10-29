@@ -51,6 +51,7 @@ $('#wo_no').combogrid({
 }); 
 	
 setdg();
+setComboGrid();
 dsInput();
 $('#matout_date').combo('disable');
 $('#expplan_date').combo('disable');

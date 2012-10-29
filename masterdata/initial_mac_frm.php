@@ -64,7 +64,6 @@ require_once "initial_mac_frm.cjs.php";
     <div class="hdr">
       <span class="kolom1">Warehouse </span><span class="kolom2"><input type="hidden" id="wh_id0" name="wh_id0">
       <select name="wh_id" id="wh_id" style="width:150px">
-        <option value=""></option>
           <?php
             $run = $pdo->query("SELECT wh_id, wh_name FROM mat_warehouse WHERE wh_id='1' ORDER BY wh_id ASC");
             $rs = $run->fetchAll(PDO::FETCH_ASSOC);
@@ -73,7 +72,7 @@ require_once "initial_mac_frm.cjs.php";
         ?>        
       </select>      
       </span>
-      <span class="kolom3">Date </span>
+      <span class="kolom3">Date</span>
       <span class="kolom4">
       	<input type="hidden" id="date0" name="date0">
         <input type="text" id="date" name="date" class="easyui-datebox" required maxlength="10" tabindex="10" style="width:100px">
@@ -82,7 +81,7 @@ require_once "initial_mac_frm.cjs.php";
       <select name="mat_type" id="mat_type" style="width:150px">
         <option value=""></option>
           <?php
-            $run = $pdo->query("SELECT KdJnsBarang, JnsBarang FROM mst_jenisbarang WHERE KdJnsBarang IN ('3','5') ORDER BY KdJnsBarang ASC");
+            $run = $pdo->query("SELECT KdJnsBarang, JnsBarang FROM mst_jenisbarang WHERE KdJnsBarang IN ('3','5','12') ORDER BY KdJnsBarang ASC");
             $rs = $run->fetchAll(PDO::FETCH_ASSOC);
             foreach($rs as $r)
                 echo "<option value=\"".$r['KdJnsBarang']."\">".$r['JnsBarang']."</option>";

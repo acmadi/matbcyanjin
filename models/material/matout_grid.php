@@ -35,7 +35,7 @@ if ($req=='menu'){
 	$q = "SELECT KdBarang AS KdBarang3,KdBarang AS KdBarang2, NmBarang AS NmBarang2,HsNo AS HsNo2,Sat AS Sat2
 		  FROM mst_barang a 
 		  LEFT JOIN mst_jenisbarang b ON KdJnsBarang=TpBarang 
-		  WHERE TpBarang='1'
+		  WHERE TpBarang NOT IN ('0','11')
 		  ORDER BY TpBarang, KdBarang ASC";
 } else if ($req=='dgRef') {	
 	$q = "SELECT *,DATE_FORMAT(wo_date,'%d/%m/%Y') AS wo_date
