@@ -50,9 +50,7 @@ require_once "bc40.cjs.php";
     <div class="easyui-tabs" tools="#tab-tools" style="width:710px;height:470px;">               
         <div title="Data Umum" style="padding:10px;">
         <div id="ref">
-          <select id="matin_id" name="matin_id">
-            <option value=""></option>
-          </select>
+          Ref No. <select id="ref_id" name="ref_id"></select>
         </div>
 
         <table>        

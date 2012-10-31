@@ -89,7 +89,7 @@ require_once "matout_frm.cjs.php";
       <select name="KdJnsDok" id="KdJnsDok" style="width:80px">
         <option value=""></option>
         <?php
-            $run = $pdo->query("SELECT * FROM jenis_dok WHERE KdJnsDok IN ('4','6','9') ORDER BY KdJnsDok");
+            $run = $pdo->query("SELECT * FROM jenis_dok WHERE KdJnsDok IN ('3','4','6','9') ORDER BY KdJnsDok");
             $rs = $run->fetchAll(PDO::FETCH_ASSOC);
             foreach($rs as $r)
                 echo "<option value=\"".$r['KdJnsDok']."\">".$r['UrJnsDok']."</option>";

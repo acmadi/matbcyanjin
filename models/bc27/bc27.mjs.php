@@ -127,6 +127,8 @@ function insert_bc(row){
 	$("#NipPengusaha").val(row.NipPengusaha);
 	$("#NmPejabat").val(row.NmPejabat);
 	$("#NipPejabat").val(row.NipPejabat);
+	setRef();
+	$("#ref_id").combogrid('setValue',row.ref_id);
 	
 	$("#NmTuj").val(row.NmTuj);
 		
@@ -159,6 +161,42 @@ function insert_bc(row){
 	dsbtnSim();
 	enbtnHps();
 	enbtnBtl();
+}
+
+function setRef(){
+	if ($('#KdTp').val()=='6' || $('#KdTp').val()=='7' || $('#KdTp').val()=='8'){
+		$('#ref_id').combogrid({  
+			panelWidth:500,  	
+			idField:'matin_id',  
+			textField:'matin_no',  
+			url: '<?php echo $basedir ?>models/bc27/bc27_grid.php?req=inhdr',  
+			fitColumns:true,  
+			columns:[[  
+				{field:'matin_id',title:'Incoming ID',width:50,hidden:true},
+				{field:'matin_no',title:'Incoming No.',width:50},
+				{field:'matin_date',title:'Incoming Date',width:50},
+				{field:'matin_name',title:'Incoming Type',width:50},
+				{field:'supplier',title:'Supplier',width:80},
+			]],
+			onClickRow:function(index,row){setdg2Url(row)}  
+		});
+		
+	} else {
+		$('#ref_id').combogrid({  
+			panelWidth:500,  	
+			idField:'matout_id',  
+			textField:'matout_no',  
+			url: '<?php echo $basedir ?>models/bc27/bc27_grid.php?req=outhdr',  
+			fitColumns:true,  
+			columns:[[  
+				{field:'matout_no',title:'Outgoing No.',width:60},
+				{field:'matout_date',title:'Outgoing Date',width:50},
+				{field:'matout_name',title:'Outgoing Type',width:50},
+				{field:'wo_no',title:'WO No.',width:50}
+			]],
+			onClickRow:function(index,row){setdg2Url(row)}  
+		});
+	}
 }
 
 function setdg(){
@@ -235,6 +273,19 @@ function setdg2(){
 	});	
 }
 
+function setdg2Url(row){
+	$('#NmTuj').val(row.supplier);
+	if ($('#KdTp').val()=='6' || $('#KdTp').val()=='7' || $('#KdTp').val()=='8'){
+		$('#dg2').datagrid({  
+			url: '<?php echo $basedir ?>models/bc27/bc27_grid.php?req=indet&matin_id='+row.matin_id
+		});
+	} else {
+		$('#dg2').datagrid({  
+			url: '<?php echo $basedir ?>models/bc27/bc27_grid.php?req=outdet&matout_id='+row.matout_id
+		});
+	}
+}
+
 function setUrBarang(id1,id2){
 	$.post("<?php echo $basedir ?>models/getField.php",{
 		NmTabel: 'mst_barang',
@@ -279,7 +330,7 @@ function setdgCari(){
 }
 
 function setEditing(rowIndex){
-	var editors = $('#dg2').datagrid('getEditors', rowIndex);
+	/*var editors = $('#dg2').datagrid('getEditors', rowIndex);
 	var fqty = editors[3];
 	var fprice = editors[5];
 	var fkurs = editors[6];
@@ -303,6 +354,7 @@ function setEditing(rowIndex){
 			fharga.target.val(harga);
 		}, 100);
 	}
+	*/
 }
 
 function total(){
@@ -353,7 +405,7 @@ function tl2Ubh2(){
 				KdBarang: $('#KdBarang').val(),
 				UrBarang: $('#UrBarang').val(),
 				qty: $('#qty').numberbox('getValue'),
-				NETTO2: $('#NETTO').numberbox('getValue'),
+				NETTO: $('#NETTO2').numberbox('getValue'),
 				VOL: $('#VOL2').numberbox('getValue'),
 				CIF: $('#CIF2').numberbox('getValue'),
 				HrgSerah: $('#HrgSerah2').numberbox('getValue')
@@ -456,6 +508,7 @@ function btnSim(){
 		NipPengusaha: $('#NipPengusaha').val(),
 		NmPejabat: $('#NmPejabat').val(),
 		NipPejabat: $('#NipPejabat').val(),
+		ref_id: $('#ref_id').combo('getValue'),
 		
 		NmTuj: $('#NmTuj').val(),
 		

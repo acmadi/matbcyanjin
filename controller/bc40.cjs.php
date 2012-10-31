@@ -2,6 +2,22 @@
 $(function(){
 
 $('#ref').hide();
+$('#ref_id').combogrid({  
+	panelWidth:500,  	
+	idField:'matin_id',  
+	textField:'matin_no',  
+	url: '<?php echo $basedir ?>models/bc40/bc40_grid.php?req=inhdr',  
+	fitColumns:true,  
+	columns:[[  
+		{field:'matin_id',title:'Incoming ID',width:50,hidden:true},
+		{field:'matin_no',title:'Incoming No.',width:50},
+		{field:'matin_date',title:'Incoming Date',width:50},
+		{field:'matin_name',title:'Incoming Type',width:50},
+		{field:'supplier',title:'Supplier',width:80},
+	]],
+	onClickRow:function(index,row){setdg2Url(row)}  
+});
+	
 $('#w').window({ 
 	title:"FORM <?php echo strtoupper($NmMenu) ?>", 
     width:770,
@@ -33,6 +49,7 @@ $('#btnTbh').click(function(){
 	setdg();
 	setdg2();	
 	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);
 });
  
 $('#btnUbh').click(function(){
@@ -41,6 +58,8 @@ $('#btnUbh').click(function(){
 	
 	enInput();	
 	enTgl();
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);
 });
   
 $('#btnSim').click(function(){

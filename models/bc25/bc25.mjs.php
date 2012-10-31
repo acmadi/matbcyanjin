@@ -161,6 +161,7 @@ function insert_bc(row){
 	$("#NipPengusaha").val(row.NipPengusaha);
 	$("#NmPejabat").val(row.NmPejabat);
 	$("#NipPejabat").val(row.NipPejabat);
+	$("#ref_id").combogrid('setValue',row.ref_id);
 	
 	$("#NmTuj").val(row.NmTuj);
 	
@@ -373,6 +374,13 @@ function setdg2(){
 		onAdd:function(index,row){rowIndex=index;setEditing(rowIndex);},			
 		onDblClickRow:function(index,row){rowIndex=index;setEditing(rowIndex);}		
 	});	
+}
+
+function setdg2Url(row){
+	//$('#NmTuj').val(row.supplier);
+	$('#dg2').datagrid({  
+		url: '<?php echo $basedir ?>models/bc25/bc25_grid.php?req=outdet&matout_id='+row.matout_id
+	});
 }
 
 function setUrBarang(id1,id2){
@@ -600,7 +608,7 @@ function tl2Ubh2(){
 				KdGunaBarang: $('#KdGunaBarang').val(),
 				Tarif: $('#Tarif').val(),
 				qty: $('#qty').numberbox('getValue'),
-				NETTO2: $('#NETTO').numberbox('getValue'),
+				NETTO: $('#NETTO2').numberbox('getValue'),
 				VOL: $('#VOL2').numberbox('getValue'),
 				CIF: $('#CIF2').numberbox('getValue'),
 				HrgSerah: $('#HrgSerah2').numberbox('getValue')
@@ -825,6 +833,7 @@ function btnSim(){
 		NipPengusaha: $('#NipPengusaha').val(),
 		NmPejabat: $('#NmPejabat').val(),
 		NipPejabat: $('#NipPejabat').val(),
+		ref_id: $('#ref_id').combo('getValue'),
 		
 		NmTuj: $('#NmTuj').val(),
 		

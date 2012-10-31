@@ -49,6 +49,11 @@ require_once "bc27.cjs.php";
 <form id="frm" name="frm" action="" method="post">
     <div class="easyui-tabs" tools="#tab-tools" style="width:720px;height:490px;">               
         <div title="Data Umum" style="padding:10px;">
+        <div id="ref">
+          &nbsp; Pilih Tujuan Pengiriman terlebih dahulu..<br>
+          &nbsp; Ref No. <select id="ref_id" name="ref_id"></select>
+        </div>
+        
         <table>        
         <tr>        
           <td>                	        	        

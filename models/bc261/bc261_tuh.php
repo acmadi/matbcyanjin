@@ -18,6 +18,7 @@ $NmPengusaha=$_POST['NmPengusaha'];
 $NipPengusaha=$_POST['NipPengusaha'];
 $NmPejabat=$_POST['NmPejabat'];
 $NipPejabat=$_POST['NipPejabat'];
+$ref_id=$_POST['ref_id'];
 
 $NmTuj=$_POST['NmTuj'];
 
@@ -104,6 +105,7 @@ if ($fhidden != ""){
 			NipPengusaha='$NipPengusaha',
 			NmPejabat='$NmPejabat',
 			NipPejabat='$NipPejabat',
+			ref_id='$ref_id',
 			
 			NmTuj='$NmTuj',
 			
@@ -127,14 +129,14 @@ if ($fhidden != ""){
 			CAR,KdTp,KdKpbcAsal,
 			KdJnsTpbAsal,NoDaf,TgDaf,
 			NmPengusaha,NipPengusaha,NmPejabat,NipPejabat,
-			NmTuj,MerekKemas,KdKemas,
+			ref_id,NmTuj,MerekKemas,KdKemas,
 			JmlKemas,VOL,BRUTO,NETTO,
 			Total,DokKdBc
 			) VALUES (
 			'$CAR','$KdTp','$KdKpbcAsal',
 			'$KdJnsTpbAsal','$NoDaf','$TgDaf',
 			'$NmPengusaha','$NipPengusaha','$NmPejabat','$NipPejabat',
-			'$NmTuj','$MerekKemas','$KdKemas',
+			'$ref_id','$NmTuj','$MerekKemas','$KdKemas',
 			'$JmlKemas','$VOL','$BRUTO','$NETTO',
 			'$Total','$DokKdBc'	
 			)";
@@ -186,7 +188,7 @@ for ($i=0; $i<$jmlnodet; $i++){
 			  ) VALUES (
 			  '$DokKdBc','$CAR','$nolist2[$i]','$KdBarang[$i]',
 			  '$UrBarang[$i]','$Negara[$i]','$Tarif[$i]','$qty[$i]',
-			  '$NETTO2[$i]','$VOL[$i]','$CIF2[$i]'
+			  '$NETTO2[$i]','$VOL2[$i]','$CIF2[$i]'
 			  )";	
 }//AKHIR MANIPULASI DATA BARANG	
 

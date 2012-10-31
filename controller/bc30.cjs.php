@@ -1,6 +1,21 @@
 <script type="text/javascript">
 $(function(){
 	
+$('#ref').hide();
+$('#ref_id').combogrid({  
+	panelWidth:500,  	
+	idField:'do_id',  
+	textField:'do_no',  
+	url: '<?php echo $basedir ?>models/bc30/bc30_grid.php?req=dohdr',  
+	fitColumns:true,  
+	columns:[[  
+		{field:'do_no',title:'DO No.',width:60},
+			{field:'do_date',title:'DO Date',width:50},
+			{field:'so_no',title:'PO Cust. No.',width:50},
+			{field:'cust',title:'Customer',width:50}
+	]],
+	onClickRow:function(index,row){setdg2Url(row)}  
+});
 
 $('#w').window({ 
 	title:"FORM <?php echo strtoupper($NmMenu) ?>", 
@@ -37,13 +52,17 @@ $('#btnTbh').click(function(){
 	enInput();
 	setdg();
 	setdg2();
-	setdgPetiKemas();		
+	setdgPetiKemas();	
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);	
 });
  
 $('#btnUbh').click(function(){
 	enbtnSim();			
 	dsbtnHps();	
 	enInput();	
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);
 });
   
 $('#btnSim').click(function(){

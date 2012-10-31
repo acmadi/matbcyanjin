@@ -24,6 +24,7 @@ $NmPengusaha=$_POST['NmPengusaha'];
 $NipPengusaha=$_POST['NipPengusaha'];
 $NmPejabat=$_POST['NmPejabat'];
 $NipPejabat=$_POST['NipPejabat'];
+$ref_id=$_POST['ref_id'];
 
 $NmTuj=$_POST['NmTuj'];
 $NmPpjk=$_POST['NmPpjk'];
@@ -120,6 +121,7 @@ if ($fhidden != ""){
 			NipPengusaha='$NipPengusaha',
 			NmPejabat='$NmPejabat',
 			NipPejabat='$NipPejabat',
+			ref_id='$ref_id',
 			
 			NmTuj='$NmTuj',
 			NmPpjk='$NmPpjk',
@@ -160,6 +162,7 @@ if ($fhidden != ""){
 			NipPengusaha,
 			NmPejabat,
 			NipPejabat,
+			ref_id,
 			
 			NmTuj,
 			NmPpjk,
@@ -191,6 +194,7 @@ if ($fhidden != ""){
 			'$NipPengusaha',
 			'$NmPejabat',
 			'$NipPejabat',
+			'$ref_id',
 			
 			'$NmTuj',
 			'$NmPpjk',
@@ -344,10 +348,6 @@ $errmsg = "Terjadi Kesalahan, Data tidak dapat disimpan!";
 	foreach($sql as $q){
 		//echo $q."\r\n";
 		$pdo->query($q);
-	}
-	foreach($sqlvb as $qvb){
-		//echo $qvb."\r\n";
-		$pdovb->query($qvb);
 	}
 	  
 	echo json_encode(array('success'=>true,'msg'=>$msg)); 

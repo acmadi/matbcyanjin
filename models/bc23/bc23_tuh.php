@@ -23,6 +23,7 @@ $NmPengusaha=$_POST['NmPengusaha'];
 $NipPengusaha=$_POST['NipPengusaha'];
 $NmPejabat=$_POST['NmPejabat'];
 $NipPejabat=$_POST['NipPejabat'];
+$ref_id=$_POST['ref_id'];
 
 $NmTuj=$_POST['NmTuj'];
 $NmPpjk=$_POST['NmPpjk'];
@@ -128,6 +129,7 @@ if ($fhidden != ""){
 			NipPengusaha='$NipPengusaha',
 			NmPejabat='$NmPejabat',
 			NipPejabat='$NipPejabat',
+			ref_id='$ref_id',
 			
 			NmTuj='$NmTuj',
 			NmPpjk='$NmPpjk',
@@ -166,6 +168,7 @@ if ($fhidden != ""){
 			NipPengusaha,
 			NmPejabat,
 			NipPejabat,
+			ref_id,
 			
 			NmTuj,
 			NmPpjk,
@@ -197,6 +200,7 @@ if ($fhidden != ""){
 			'$NipPengusaha',
 			'$NmPejabat',
 			'$NipPejabat',
+			'$ref_id',
 			
 			'$NmTuj',
 			'$NmPpjk',
@@ -222,7 +226,7 @@ $sql[]="DELETE FROM hdrpengangkutan WHERE DokKdBc = '$DokKdBc' AND CAR = '".$CAR
 $sql[] = "INSERT INTO hdrpengangkutan (
 		  DokKdBc,CAR,CaraAngkut,NmAngkut,NoPolisi
 		  ) VALUES (
-		  '$DokKdBc','$CAR','$CaraAngkut','$NmAngkut','$NoPolisi',
+		  '$DokKdBc','$CAR','$CaraAngkut','$NmAngkut','$NoPolisi'
 		  )";	
 
 //MANIPULASI DATA HDRPELABUHAN

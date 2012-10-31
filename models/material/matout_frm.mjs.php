@@ -44,6 +44,7 @@ function insert_menu(row){
 	$('#matout_date').datebox('setValue',row.matout_date);
 	$('#wo_id').val(row.wo_id);
 	$('#wo_no').combogrid('setValue',row.wo_no);	
+	$('#KdJnsDok').val(row.KdJnsDok);	
 	$('#notes').val(row.notes);	
 	setdg();
 	$('#toolbar2').hide();
@@ -118,6 +119,7 @@ function simpan(){
 		matout_date: $('#matout_date').datebox('getValue'),
 		wo_id: $('#wo_id').val(),
 		notes: $('#notes').val(),
+		KdJnsDok: $('#KdJnsDok').val(),
 		
 		//FORM LIST DATA BARANG	
 		nolist:nolist_val,KdBarang2:KdBarang2_val,

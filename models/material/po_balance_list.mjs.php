@@ -51,7 +51,14 @@ function setdg(){
 					{field:'NmBarang2',title:'Desc',width:100},   
 					{field:'Sat2',title:'Unit',width:80}, 
 					{field:'qty',title:'Qty. PO',width:100,align:'right'},  
-					{field:'qty_in',title:'Qty. In',width:100,align:'right'}  
+					{field:'qty_in',title:'Qty. In',width:100,align:'right'},
+					{field:'qty_bal',title:'Qty. Balance',width:100,align:'right',formatter: function(value,row,index){				
+					qty=parseFloat(row.qty.replace(',',''));
+					qty_in=parseFloat(row.qty_in.replace(',',''));
+					qty_bal=qty-qty_in;
+					
+					return qty_bal.toFixed(2);
+				}}  
 				]],  
 				onResize:function(){  
 					$('#dg').datagrid('fixDetailRowHeight',index);  

@@ -129,6 +129,7 @@ function insert_bc(row){
 	$("#NipPengusaha").val(row.NipPengusaha);
 	$("#NmPejabat").val(row.NmPejabat);
 	$("#NipPejabat").val(row.NipPejabat);
+	$("#ref_id").combogrid('setValue',row.ref_id);
 	
 	$("#NmTuj").val(row.NmTuj);
 	
@@ -245,6 +246,13 @@ function setdg2(){
 	});	
 }
 
+function setdg2Url(row){
+	$('#NmTuj').val(row.supplier);
+	$('#dg2').datagrid({  
+		url: '<?php echo $basedir ?>models/bc40/bc40_grid.php?req=indet&matin_id='+row.matin_id
+	});
+}
+
 function setUrBarang(id1,id2){
 	$.post("<?php echo $basedir ?>models/getField.php",{
 		NmTabel: 'mst_barang',
@@ -289,7 +297,7 @@ function setdgCari(){
 }
 
 function setEditing(rowIndex){
-	var editors = $('#dg2').datagrid('getEditors', rowIndex);
+	/*var editors = $('#dg2').datagrid('getEditors', rowIndex);
 	var fqty = editors[3];
 	var fprice = editors[5];
 	var fkurs = editors[6];
@@ -312,7 +320,7 @@ function setEditing(rowIndex){
 			var harga = qty*price*kurs;
 			fharga.target.val(harga);
 		}, 100);
-	}
+	}*/
 }
 
 function total(){
@@ -360,7 +368,7 @@ function tl2Ubh2(){
 				KdBarang: $('#KdBarang').val(),
 				UrBarang: $('#UrBarang').val(),
 				qty: $('#qty').numberbox('getValue'),
-				NETTO2: $('#NETTO').numberbox('getValue'),
+				NETTO: $('#NETTO2').numberbox('getValue'),
 				VOL: $('#VOL2').numberbox('getValue'),
 				HrgSerah: $('#HrgSerah2').numberbox('getValue')
 			}
@@ -459,6 +467,7 @@ function btnSim(){
 		NipPengusaha: $('#NipPengusaha').val(),
 		NmPejabat: $('#NmPejabat').val(),
 		NipPejabat: $('#NipPejabat').val(),
+		ref_id: $('#ref_id').combo('getValue'),
 		
 		NmTuj: $('#NmTuj').val(),
 		

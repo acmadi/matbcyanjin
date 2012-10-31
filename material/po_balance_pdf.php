@@ -191,11 +191,13 @@ $html = '<h2 align="center">'.$NmMenu.'</h2>'.
 		  <th width="30"><b>Unit</b></th>
 		  <th align="right"><b>Qty. PO</b></th>
 		  <th align="right"><b>Qty. In</b></th>
+		  <th align="right"><b>Qty. Balance</b></th>
 		</tr>
 		</thead>
 		<tbody>';
 $no=1;
 foreach ($rs as $r){
+$qty_bal=$r['qty']-$r['qty_in'];
 $html .= '<tr>'.
 	  	 '<td align="center" width="25">'.$no.'</td>'.
 		 '<td width="80">'.$r['KdBarang2'].'</td>'.
@@ -203,11 +205,14 @@ $html .= '<tr>'.
 		 '<td width="30">'.$r['Sat2'].'</td>'.
 		 '<td align="right">'.$r['qty'].'</td>'.
 		 '<td align="right">'.$r['qty_in'].'</td>'.
+		 '<td align="right">'.number_format($qty_bal,2).'</td>'.
 		 '</tr>';
 $no+=1;	
 }
 
-$html .= '</tbody></table><br>&nbsp;<br>Notes : '.$rsh[0]['notes'].'<br>Conditions:<br>';
+$html .= '</tbody></table>';
+
+/*$html .= '</tbody></table><br>&nbsp;<br>Notes : '.$rsh[0]['notes'].'<br>Conditions:<br>';
 
 $html .= '<table>
 		<tr>
@@ -242,7 +247,7 @@ $html .= '<table>
 		  <td width="10">:</td>
 		  <td width="80">'.$rsh[0]['auth_sign'].'</td>
 		</tr>
-		</table>';
+		</table>';*/
 
 // output the HTML content
 $pdf->writeHTML($html, true, false, true, false, '');

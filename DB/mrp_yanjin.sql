@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50525
 File Encoding         : 65001
 
-Date: 2012-09-05 19:11:24
+Date: 2012-10-29 11:32:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1598,247 +1598,101 @@ CREATE TABLE `log` (
   `nama_user` varchar(20) DEFAULT NULL,
   `ket` text,
   PRIMARY KEY (`no`)
-) ENGINE=InnoDB AUTO_INCREMENT=478 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=611 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of log
 -- ----------------------------
-INSERT INTO log VALUES ('242', '2012-08-31 15:34:14', 'admin', 'Add po 3');
-INSERT INTO log VALUES ('243', '2012-08-31 15:37:33', 'admin', 'Add po 1');
-INSERT INTO log VALUES ('244', '2012-08-31 15:38:19', 'admin', 'Add po 2');
-INSERT INTO log VALUES ('245', '2012-08-31 15:38:59', 'admin', 'Add po 3');
-INSERT INTO log VALUES ('246', '2012-08-31 15:39:14', 'admin', 'Edit po 3');
-INSERT INTO log VALUES ('247', '2012-08-31 15:39:27', 'admin', 'Add po 4');
-INSERT INTO log VALUES ('248', '2012-08-31 16:22:48', 'admin', 'Add outgoing material 1');
-INSERT INTO log VALUES ('249', '2012-08-31 16:24:54', 'admin', 'Edit outgoing material 1');
-INSERT INTO log VALUES ('250', '2012-08-31 11:45:47', 'admin', 'logout');
-INSERT INTO log VALUES ('251', '2012-08-31 19:36:06', 'admin', 'login');
-INSERT INTO log VALUES ('252', '2012-08-31 20:36:59', 'admin', 'Add outgoing material 2');
-INSERT INTO log VALUES ('253', '2012-08-31 20:38:03', 'admin', 'Add outgoing material 3');
-INSERT INTO log VALUES ('254', '2012-08-31 21:01:14', 'admin', 'Edit scrap out 2');
-INSERT INTO log VALUES ('255', '2012-08-31 21:01:28', 'admin', 'Add scrap out 4');
-INSERT INTO log VALUES ('256', '2012-08-31 21:01:39', 'admin', 'Edit scrap out 4');
-INSERT INTO log VALUES ('257', '2012-08-31 21:01:47', 'admin', 'Delete scrap out 4');
-INSERT INTO log VALUES ('258', '2012-08-31 21:22:00', 'admin', 'add finished goods WIP1');
-INSERT INTO log VALUES ('259', '2012-08-31 21:22:20', 'admin', 'add finished goods WIP2');
-INSERT INTO log VALUES ('260', '2012-08-31 21:22:32', 'admin', 'add finished goods WIP3');
-INSERT INTO log VALUES ('261', '2012-09-01 20:23:36', 'admin', 'login');
-INSERT INTO log VALUES ('262', '2012-09-02 20:30:52', 'admin', 'login');
-INSERT INTO log VALUES ('263', '2012-09-02 21:23:09', 'admin', 'Delete wip  0000-00-00');
-INSERT INTO log VALUES ('264', '2012-09-02 21:23:39', 'admin', 'Add wip 2 2012-09-03');
-INSERT INTO log VALUES ('265', '2012-09-02 21:23:39', 'admin', 'Delete wip  0000-00-00');
-INSERT INTO log VALUES ('266', '2012-09-03 09:42:02', 'admin', 'Add fg production result 3 2012-09-03');
-INSERT INTO log VALUES ('267', '2012-09-03 11:17:09', 'admin', 'login');
-INSERT INTO log VALUES ('268', '2012-09-03 12:00:36', 'admin', 'Add outgoing material 93');
-INSERT INTO log VALUES ('269', '2012-09-03 12:03:08', 'admin', 'Add outgoing material 1');
-INSERT INTO log VALUES ('270', '2012-09-03 12:15:08', 'admin', 'Edit outgoing material 1');
-INSERT INTO log VALUES ('271', '2012-09-03 12:16:09', 'admin', 'Delete outgoing material 1');
-INSERT INTO log VALUES ('272', '2012-09-03 12:16:35', 'admin', 'Add outgoing material 1');
-INSERT INTO log VALUES ('273', '2012-09-03 16:10:53', 'admin', 'login');
-INSERT INTO log VALUES ('274', '2012-09-03 11:19:14', 'admin', 'logout');
-INSERT INTO log VALUES ('275', '2012-09-04 08:36:00', 'admin', 'login');
-INSERT INTO log VALUES ('276', '2012-09-04 09:49:00', 'admin', 'login');
-INSERT INTO log VALUES ('277', '2012-09-04 09:53:58', 'admin', 'Add commercial invoice 1');
-INSERT INTO log VALUES ('278', '2012-09-04 10:07:11', 'admin', 'Edit commercial invoice 1');
-INSERT INTO log VALUES ('279', '2012-09-04 10:09:50', 'admin', 'Edit commercial invoice 1');
-INSERT INTO log VALUES ('280', '2012-09-04 10:13:42', 'admin', 'Add commercial invoice 2');
-INSERT INTO log VALUES ('281', '2012-09-04 10:13:55', 'admin', 'Delete commercial invoice 2');
-INSERT INTO log VALUES ('282', '2012-09-04 13:12:47', 'admin', 'login');
-INSERT INTO log VALUES ('283', '2012-09-04 13:34:36', 'admin', 'Add packing list 1');
-INSERT INTO log VALUES ('284', '2012-09-04 13:38:28', 'admin', 'Edit packing list 1');
-INSERT INTO log VALUES ('285', '2012-09-04 13:39:30', 'admin', 'Edit packing list 1');
-INSERT INTO log VALUES ('286', '2012-09-04 13:39:40', 'admin', 'Delete packing list 1');
-INSERT INTO log VALUES ('287', '2012-09-04 17:10:28', 'admin', 'login');
-INSERT INTO log VALUES ('288', '2012-09-04 17:20:44', 'admin', 'login');
-INSERT INTO log VALUES ('289', '2012-09-04 17:30:38', 'admin', 'login');
-INSERT INTO log VALUES ('290', '2012-09-04 18:03:32', 'admin', 'Add po customer 24');
-INSERT INTO log VALUES ('291', '2012-09-04 18:44:05', 'admin', 'login');
-INSERT INTO log VALUES ('292', '2012-09-04 18:52:40', 'admin', 'tambah data barang WIP4');
-INSERT INTO log VALUES ('293', '2012-09-04 13:56:07', 'admin', 'logout');
-INSERT INTO log VALUES ('294', '2012-09-06 10:47:45', 'admin', 'login');
-INSERT INTO log VALUES ('295', '2012-09-06 06:47:11', 'admin', 'logout');
-INSERT INTO log VALUES ('296', '2012-09-06 11:47:35', 'admin', 'login');
-INSERT INTO log VALUES ('297', '2012-09-06 13:02:13', 'admin', 'tambah data material group Aluminium Sheet');
-INSERT INTO log VALUES ('298', '2012-09-06 13:03:16', 'admin', 'tambah data material group Aluminium Coil');
-INSERT INTO log VALUES ('299', '2012-09-06 13:16:57', 'admin', 'ubah data material group ALMC');
-INSERT INTO log VALUES ('300', '2012-09-06 13:17:33', 'admin', 'ubah data material group ALME');
-INSERT INTO log VALUES ('301', '2012-09-06 13:17:48', 'admin', 'tambah data material group Aluminium Sheet');
-INSERT INTO log VALUES ('302', '2012-09-06 13:18:12', 'admin', 'tambah data material group Steel');
-INSERT INTO log VALUES ('303', '2012-09-06 13:19:02', 'admin', 'tambah data material group Steel C');
-INSERT INTO log VALUES ('304', '2012-09-06 13:19:22', 'admin', 'tambah data material group Steel Ecotrio');
-INSERT INTO log VALUES ('305', '2012-09-06 13:26:21', 'admin', 'ubah data unit of items PCE');
-INSERT INTO log VALUES ('306', '2012-09-06 13:33:36', 'admin', 'edit material TESMAT-1');
-INSERT INTO log VALUES ('307', '2012-09-06 13:34:39', 'admin', 'edit material ALME0001');
-INSERT INTO log VALUES ('308', '2012-09-06 13:36:31', 'admin', 'edit material TESMAT-2');
-INSERT INTO log VALUES ('309', '2012-09-06 13:37:00', 'admin', 'edit material TESMAT-3');
-INSERT INTO log VALUES ('310', '2012-09-06 13:54:56', 'admin', 'ubah data material group RAC');
-INSERT INTO log VALUES ('311', '2012-09-06 13:56:42', 'admin', 'ubah data material group RAE');
-INSERT INTO log VALUES ('312', '2012-09-06 13:56:50', 'admin', 'ubah data material group RAS');
-INSERT INTO log VALUES ('313', '2012-09-06 13:57:09', 'admin', 'ubah data material group RMS');
-INSERT INTO log VALUES ('314', '2012-09-06 13:57:22', 'admin', 'hapus data material group ');
-INSERT INTO log VALUES ('315', '2012-09-06 13:57:25', 'admin', 'hapus data material group ');
-INSERT INTO log VALUES ('316', '2012-09-06 14:00:16', 'admin', 'ubah data material group ZSNC');
-INSERT INTO log VALUES ('317', '2012-09-06 14:05:17', 'admin', 'ubah data material group RMO');
-INSERT INTO log VALUES ('318', '2012-09-06 14:09:05', 'admin', 'hapus data material group ');
-INSERT INTO log VALUES ('319', '2012-09-06 14:09:45', 'admin', 'hapus data material group ');
-INSERT INTO log VALUES ('320', '2012-09-06 14:10:42', 'admin', 'add material RACI0001');
-INSERT INTO log VALUES ('321', '2012-09-06 14:42:18', 'admin', 'Add initial balance material 1 2012-10-01');
-INSERT INTO log VALUES ('322', '2012-09-06 09:47:59', 'admin', 'logout');
-INSERT INTO log VALUES ('323', '2012-09-10 21:04:08', 'admin', 'login');
-INSERT INTO log VALUES ('324', '2012-09-10 21:33:09', 'admin', 'edit finished goods 3K010645');
-INSERT INTO log VALUES ('325', '2012-09-10 21:36:39', 'admin', 'edit finished goods 123');
-INSERT INTO log VALUES ('326', '2012-09-11 14:08:09', 'admin', 'login');
-INSERT INTO log VALUES ('327', '2012-09-11 14:26:30', 'admin', 'Edit initial balance material 1 2012-08-01');
-INSERT INTO log VALUES ('328', '2012-09-11 14:49:13', 'admin', 'Delete initial balance material 2 2012-01-01');
-INSERT INTO log VALUES ('329', '2012-09-11 14:49:35', 'admin', 'Delete initial balance material 1 2012-08-01');
-INSERT INTO log VALUES ('330', '2012-09-11 14:57:20', 'admin', 'edit finished goods WIP1');
-INSERT INTO log VALUES ('331', '2012-09-11 15:00:12', 'admin', 'Add initial balance wip 2 2012-09-11');
-INSERT INTO log VALUES ('332', '2012-09-11 15:45:46', 'admin', 'login');
-INSERT INTO log VALUES ('333', '2012-09-11 15:48:14', 'admin', 'Add po customer 25');
-INSERT INTO log VALUES ('334', '2012-09-11 15:56:18', 'admin', 'Add work order 3');
-INSERT INTO log VALUES ('335', '2012-09-11 16:13:58', 'admin', 'Delete wip 2 2012-09-03');
-INSERT INTO log VALUES ('336', '2012-09-11 16:14:25', 'admin', 'Add wip 2 2012-11-30');
-INSERT INTO log VALUES ('337', '2012-09-11 11:15:20', 'admin', 'logout');
-INSERT INTO log VALUES ('338', '2012-09-12 10:45:22', 'admin', 'login');
-INSERT INTO log VALUES ('339', '2012-09-12 10:58:09', 'admin', 'Edit fg production result 3 2012-09-03');
-INSERT INTO log VALUES ('340', '2012-09-12 11:05:06', 'admin', 'Edit delivery order 1');
-INSERT INTO log VALUES ('341', '2012-09-12 13:42:29', 'admin', 'login');
-INSERT INTO log VALUES ('342', '2012-09-12 14:48:52', 'admin', 'Add stock opname 1');
-INSERT INTO log VALUES ('343', '2012-09-12 15:06:10', 'admin', 'Add stock opname 2');
-INSERT INTO log VALUES ('344', '2012-09-12 15:17:13', 'admin', 'Edit stock opname 2');
-INSERT INTO log VALUES ('345', '2012-09-13 09:19:42', 'admin', 'login');
-INSERT INTO log VALUES ('346', '2012-09-13 11:14:17', 'admin', 'login');
-INSERT INTO log VALUES ('347', '2012-09-13 11:28:48', 'admin', 'Delete matin 1');
-INSERT INTO log VALUES ('348', '2012-09-13 11:29:52', 'admin', 'Delete po 2');
-INSERT INTO log VALUES ('349', '2012-09-13 11:30:00', 'admin', 'Delete po 1');
-INSERT INTO log VALUES ('350', '2012-09-13 11:31:01', 'admin', 'Add po 5');
-INSERT INTO log VALUES ('351', '2012-09-13 11:31:29', 'admin', 'Add matin 1');
-INSERT INTO log VALUES ('352', '2012-09-13 11:42:52', 'admin', 'Delete outgoing material 3');
-INSERT INTO log VALUES ('353', '2012-09-13 11:43:00', 'admin', 'Delete outgoing material 1');
-INSERT INTO log VALUES ('354', '2012-09-13 11:43:47', 'admin', 'Add outgoing material 3');
-INSERT INTO log VALUES ('355', '2012-09-13 07:12:39', 'admin', 'logout');
-INSERT INTO log VALUES ('356', '2012-09-14 14:02:21', 'admin', 'login');
-INSERT INTO log VALUES ('357', '2012-09-15 15:44:20', '', 'logout');
-INSERT INTO log VALUES ('358', '2012-09-15 20:44:37', 'admin', 'login');
-INSERT INTO log VALUES ('359', '2012-09-15 20:49:47', 'admin', 'Delete initial balance material 1 2012-01-01');
-INSERT INTO log VALUES ('360', '2012-09-15 20:50:15', 'admin', 'Edit initial balance material 1 2012-10-01');
-INSERT INTO log VALUES ('361', '2012-09-15 20:50:24', 'admin', 'Delete initial balance material 1 2012-08-26');
-INSERT INTO log VALUES ('362', '2012-09-15 21:00:25', 'admin', 'Edit initial balance material 1 2012-09-03');
-INSERT INTO log VALUES ('363', '2012-09-15 21:01:16', 'admin', 'Edit initial balance material 1 2012-08-31');
-INSERT INTO log VALUES ('364', '2012-09-15 21:14:06', 'admin', 'Delete matin 1');
-INSERT INTO log VALUES ('365', '2012-09-15 21:17:40', 'admin', 'Edit po 5');
-INSERT INTO log VALUES ('366', '2012-09-15 21:18:33', 'admin', 'Edit po 5');
-INSERT INTO log VALUES ('367', '2012-09-15 21:19:23', 'admin', 'Add matin 1');
-INSERT INTO log VALUES ('368', '2012-09-15 21:19:48', 'admin', 'Edit matin 1');
-INSERT INTO log VALUES ('369', '2012-09-15 21:26:22', 'admin', 'Delete outgoing material 3');
-INSERT INTO log VALUES ('370', '2012-09-15 21:27:00', 'admin', 'Add outgoing material 3');
-INSERT INTO log VALUES ('371', '2012-09-15 21:28:36', 'admin', 'Edit outgoing material 3');
-INSERT INTO log VALUES ('372', '2012-09-15 21:30:23', 'admin', 'Edit outgoing material 3');
-INSERT INTO log VALUES ('373', '2012-09-15 22:38:25', 'admin', 'Edit stock opname 2');
-INSERT INTO log VALUES ('374', '2012-09-15 23:16:59', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('375', '2012-09-15 23:36:00', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('376', '2012-09-15 18:36:18', 'admin', 'logout');
-INSERT INTO log VALUES ('377', '2012-09-16 17:40:15', 'admin', 'login');
-INSERT INTO log VALUES ('378', '2012-09-16 17:43:10', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('379', '2012-09-16 18:35:39', 'admin', 'login');
-INSERT INTO log VALUES ('380', '2012-09-16 18:38:16', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('381', '2012-09-16 19:12:34', 'admin', 'login');
-INSERT INTO log VALUES ('382', '2012-09-16 20:42:04', 'admin', 'login');
-INSERT INTO log VALUES ('383', '2012-09-16 20:46:50', 'admin', 'login');
-INSERT INTO log VALUES ('384', '2012-09-17 09:34:45', 'admin', 'login');
-INSERT INTO log VALUES ('385', '2012-09-17 13:00:27', 'admin', 'login');
-INSERT INTO log VALUES ('386', '2012-09-17 13:17:48', 'admin', 'Delete po customer 24');
-INSERT INTO log VALUES ('387', '2012-09-17 13:17:59', 'admin', 'Delete po customer 22');
-INSERT INTO log VALUES ('388', '2012-09-17 13:18:07', 'admin', 'Delete po customer 23');
-INSERT INTO log VALUES ('389', '2012-09-17 13:58:48', 'admin', 'login');
-INSERT INTO log VALUES ('390', '2012-09-17 14:22:20', 'admin', 'Add initial balance material 3 2012-09-17');
-INSERT INTO log VALUES ('391', '2012-09-17 14:49:22', 'admin', 'Add consumption list 123');
-INSERT INTO log VALUES ('392', '2012-09-17 14:54:30', 'admin', 'Delete consumption list ');
-INSERT INTO log VALUES ('393', '2012-09-17 14:54:41', 'admin', 'Delete consumption list 123');
-INSERT INTO log VALUES ('394', '2012-09-17 14:54:50', 'admin', 'Delete consumption list ');
-INSERT INTO log VALUES ('395', '2012-09-17 14:57:26', 'admin', 'Delete consumption list 3K01064500A0-0001');
-INSERT INTO log VALUES ('396', '2012-09-17 14:57:55', 'admin', 'Add consumption list 123');
-INSERT INTO log VALUES ('397', '2012-09-17 15:37:32', 'admin', 'Delete work order 1');
-INSERT INTO log VALUES ('398', '2012-09-17 15:37:40', 'admin', 'Delete work order 2');
-INSERT INTO log VALUES ('399', '2012-09-17 16:47:24', 'admin', 'login');
-INSERT INTO log VALUES ('400', '2012-09-17 11:55:21', 'admin', 'logout');
-INSERT INTO log VALUES ('401', '2012-09-17 16:56:22', 'admin', 'login');
-INSERT INTO log VALUES ('402', '2012-09-17 11:57:42', 'admin', 'logout');
-INSERT INTO log VALUES ('403', '2012-09-17 20:05:16', 'admin', 'login');
-INSERT INTO log VALUES ('404', '2012-09-17 16:08:56', 'admin', 'logout');
-INSERT INTO log VALUES ('405', '2012-09-19 10:05:55', 'admin', 'login');
-INSERT INTO log VALUES ('406', '2012-09-19 11:04:11', 'admin', 'login');
-INSERT INTO log VALUES ('407', '2012-09-19 11:32:44', 'admin', 'Edit matin 1');
-INSERT INTO log VALUES ('408', '2012-09-19 16:32:40', 'admin', 'login');
-INSERT INTO log VALUES ('409', '2012-09-19 19:52:33', 'admin', 'login');
-INSERT INTO log VALUES ('410', '2012-09-19 20:17:58', 'admin', 'Delete outgoing material 3');
-INSERT INTO log VALUES ('411', '2012-09-19 20:29:37', 'admin', 'Add outgoing material 3');
-INSERT INTO log VALUES ('412', '2012-09-19 20:29:50', 'admin', 'Edit outgoing material 3');
-INSERT INTO log VALUES ('413', '2012-09-19 20:36:35', 'admin', 'Delete outgoing material 2');
-INSERT INTO log VALUES ('414', '2012-09-24 12:57:14', 'admin', 'login');
-INSERT INTO log VALUES ('415', '2012-09-24 20:07:49', 'admin', 'login');
-INSERT INTO log VALUES ('416', '2012-09-25 09:09:11', 'admin', 'login');
-INSERT INTO log VALUES ('417', '2012-09-26 11:15:19', 'admin', 'login');
-INSERT INTO log VALUES ('418', '2012-09-26 14:24:59', 'admin', 'login');
-INSERT INTO log VALUES ('419', '2012-09-26 15:29:00', 'admin', 'login');
-INSERT INTO log VALUES ('420', '2012-09-26 20:26:38', 'admin', 'login');
-INSERT INTO log VALUES ('421', '2012-09-26 16:44:32', 'admin', 'logout');
-INSERT INTO log VALUES ('422', '2012-09-26 21:46:04', 'admin', 'login');
-INSERT INTO log VALUES ('423', '2012-09-26 16:54:55', 'admin', 'logout');
-INSERT INTO log VALUES ('424', '2012-09-26 21:55:21', 'admin', 'login');
-INSERT INTO log VALUES ('425', '2012-09-26 21:57:33', 'admin', 'Add scrap out 4');
-INSERT INTO log VALUES ('426', '2012-09-26 17:05:06', 'admin', 'logout');
-INSERT INTO log VALUES ('427', '2012-09-27 08:15:41', 'admin', 'login');
-INSERT INTO log VALUES ('428', '2012-09-27 08:51:17', 'admin', 'Add delivery order 2');
-INSERT INTO log VALUES ('429', '2012-09-27 09:00:21', 'admin', 'Edit delivery order 2');
-INSERT INTO log VALUES ('430', '2012-09-27 15:56:37', 'admin', 'login');
-INSERT INTO log VALUES ('431', '2012-09-27 12:10:13', 'admin', 'logout');
-INSERT INTO log VALUES ('432', '2012-09-27 20:38:48', 'admin', 'login');
-INSERT INTO log VALUES ('433', '2012-09-27 21:11:14', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('434', '2012-09-27 21:17:40', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('435', '2012-09-28 08:33:29', 'admin', 'login');
-INSERT INTO log VALUES ('436', '2012-09-28 08:33:58', 'admin', 'login');
-INSERT INTO log VALUES ('437', '2012-09-28 08:36:07', 'admin', 'login');
-INSERT INTO log VALUES ('438', '2012-09-28 08:40:41', 'admin', 'login');
-INSERT INTO log VALUES ('439', '2012-09-28 10:11:05', 'admin', 'login');
-INSERT INTO log VALUES ('440', '2012-09-29 11:25:44', 'admin', 'login');
-INSERT INTO log VALUES ('441', '2012-09-29 06:26:10', 'admin', 'logout');
-INSERT INTO log VALUES ('442', '2012-09-29 15:07:52', 'admin', 'login');
-INSERT INTO log VALUES ('443', '2012-09-29 15:08:23', 'admin', 'edit material ALME0003');
-INSERT INTO log VALUES ('444', '2012-09-29 15:08:36', 'admin', 'delete data finished goods ZZP - 00');
-INSERT INTO log VALUES ('445', '2012-09-29 19:59:55', 'admin', 'login');
-INSERT INTO log VALUES ('446', '2012-09-29 15:27:41', 'admin', 'logout');
-INSERT INTO log VALUES ('447', '2012-09-29 20:27:51', 'admin', 'login');
-INSERT INTO log VALUES ('448', '2012-09-29 15:28:06', 'admin', 'logout');
-INSERT INTO log VALUES ('449', '2012-09-29 20:28:14', 'admin', 'login');
-INSERT INTO log VALUES ('450', '2012-10-01 13:43:42', 'admin', 'login');
-INSERT INTO log VALUES ('451', '2012-10-01 15:22:33', 'admin', 'login');
-INSERT INTO log VALUES ('452', '2012-10-01 17:38:25', 'admin', 'login');
-INSERT INTO log VALUES ('453', '2012-10-01 18:30:26', 'admin', 'login');
-INSERT INTO log VALUES ('454', '2012-10-01 19:53:01', 'admin', 'login');
-INSERT INTO log VALUES ('455', '2012-10-01 21:03:27', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('456', '2012-10-01 21:12:14', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('457', '2012-10-01 21:26:39', 'admin', 'Edit initial balance material 1 2012-08-31');
-INSERT INTO log VALUES ('458', '2012-10-01 21:32:07', 'admin', 'Edit outgoing material 3');
-INSERT INTO log VALUES ('459', '2012-10-02 11:01:52', 'admin', 'login');
-INSERT INTO log VALUES ('460', '2012-10-02 12:47:47', 'admin', 'login');
-INSERT INTO log VALUES ('461', '2012-10-02 14:31:37', 'admin', 'login');
-INSERT INTO log VALUES ('462', '2012-10-02 14:51:30', 'admin', 'Edit initial balance material 3 2012-09-17');
-INSERT INTO log VALUES ('463', '2012-10-02 14:52:24', 'admin', 'Delete delivery order 1');
-INSERT INTO log VALUES ('464', '2012-10-02 14:52:55', 'admin', 'Edit delivery order 2');
-INSERT INTO log VALUES ('465', '2012-10-02 14:53:43', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('466', '2012-10-02 14:56:13', 'admin', 'Add stock adjustment 3');
-INSERT INTO log VALUES ('467', '2012-10-02 16:07:53', 'admin', 'login');
-INSERT INTO log VALUES ('468', '2012-10-03 16:51:34', 'admin', 'login');
-INSERT INTO log VALUES ('469', '2012-10-04 09:15:36', 'admin', 'login');
-INSERT INTO log VALUES ('470', '2012-09-05 16:24:53', 'admin', 'login');
-INSERT INTO log VALUES ('471', '2012-09-05 11:44:25', 'admin', 'logout');
-INSERT INTO log VALUES ('472', '2012-09-05 16:44:34', 'admin', 'login');
-INSERT INTO log VALUES ('473', '2012-09-05 11:46:05', 'admin', 'logout');
-INSERT INTO log VALUES ('474', '2012-09-05 16:46:49', 'admin', 'login');
-INSERT INTO log VALUES ('475', '2012-09-05 18:25:58', 'admin', 'login');
-INSERT INTO log VALUES ('476', '2012-09-05 18:28:39', 'admin', 'login');
-INSERT INTO log VALUES ('477', '2012-09-05 18:38:22', 'admin', 'delete finished goods RACI0001');
+INSERT INTO log VALUES ('521', '2012-10-14 20:37:16', 'admin', 'Add initial balance machine & office equipment  2012-10-14 3');
+INSERT INTO log VALUES ('522', '2012-10-14 20:37:56', 'admin', 'Delete initial balance machine & office equipment 2012-10-14 3');
+INSERT INTO log VALUES ('523', '2012-10-16 10:33:52', 'admin', 'login');
+INSERT INTO log VALUES ('524', '2012-10-16 13:34:35', 'admin', 'login');
+INSERT INTO log VALUES ('525', '2012-10-16 14:13:28', 'admin', 'login');
+INSERT INTO log VALUES ('526', '2012-10-16 15:50:40', 'admin', 'login');
+INSERT INTO log VALUES ('527', '2012-10-16 17:29:44', 'admin', 'login');
+INSERT INTO log VALUES ('528', '2012-10-16 20:23:45', 'admin', 'login');
+INSERT INTO log VALUES ('529', '2012-10-17 08:19:34', 'admin', 'login');
+INSERT INTO log VALUES ('530', '2012-10-17 09:19:18', 'admin', 'ubah data company CLARION');
+INSERT INTO log VALUES ('531', '2012-10-17 09:21:57', 'admin', 'ubah data company CLARION');
+INSERT INTO log VALUES ('532', '2012-10-17 09:22:52', 'admin', 'ubah data company CLARION');
+INSERT INTO log VALUES ('533', '2012-10-17 09:34:29', 'admin', 'ubah data company PT. ALUMINDO LIGHT METAL INDUSTRY');
+INSERT INTO log VALUES ('534', '2012-10-17 11:31:43', 'admin', 'Add initial balance material 1 2012-10-17');
+INSERT INTO log VALUES ('535', '2012-10-17 13:39:40', 'admin', 'login');
+INSERT INTO log VALUES ('536', '2012-10-17 14:00:24', 'admin', 'Add initial balance material 3 2012-10-17');
+INSERT INTO log VALUES ('537', '2012-10-17 14:23:25', 'admin', 'Add initial balance wip 2 2012-10-18');
+INSERT INTO log VALUES ('538', '2012-10-17 14:27:28', 'admin', 'Add initial balance machine & office equipment  2012-10-15 3');
+INSERT INTO log VALUES ('539', '2012-10-17 14:29:27', 'admin', 'Add initial balance machine & office equipment  2012-10-15 5');
+INSERT INTO log VALUES ('540', '2012-10-17 15:45:30', 'admin', 'Edit po customer 25');
+INSERT INTO log VALUES ('541', '2012-10-17 15:45:32', 'admin', 'Edit po customer 25');
+INSERT INTO log VALUES ('542', '2012-10-17 16:31:32', 'admin', 'login');
+INSERT INTO log VALUES ('543', '2012-10-17 11:55:07', 'admin', 'logout');
+INSERT INTO log VALUES ('544', '2012-10-18 08:17:16', 'admin', 'login');
+INSERT INTO log VALUES ('545', '2012-10-18 10:06:33', 'admin', 'login');
+INSERT INTO log VALUES ('546', '2012-10-18 10:37:19', 'admin', 'Add wip 2 2012-10-18');
+INSERT INTO log VALUES ('547', '2012-10-18 10:43:01', 'admin', 'Add wip 2 2012-10-18');
+INSERT INTO log VALUES ('548', '2012-10-18 10:53:28', 'admin', 'Add wip 2 2012-10-18');
+INSERT INTO log VALUES ('549', '2012-10-18 11:12:32', 'admin', 'Add fg production result 3 2012-10-18');
+INSERT INTO log VALUES ('550', '2012-10-18 15:34:12', 'admin', 'login');
+INSERT INTO log VALUES ('551', '2012-10-20 20:16:29', 'admin', 'login');
+INSERT INTO log VALUES ('552', '2012-10-20 20:40:28', 'admin', 'edit finished goods WIP1');
+INSERT INTO log VALUES ('553', '2012-10-20 17:13:41', 'admin', 'logout');
+INSERT INTO log VALUES ('554', '2012-10-21 09:59:30', 'admin', 'login');
+INSERT INTO log VALUES ('555', '2012-10-21 13:29:04', 'admin', 'login');
+INSERT INTO log VALUES ('556', '2012-10-21 15:07:29', 'admin', 'login');
+INSERT INTO log VALUES ('557', '2012-10-22 08:47:36', 'admin', 'login');
+INSERT INTO log VALUES ('558', '2012-10-22 11:02:16', 'admin', 'login');
+INSERT INTO log VALUES ('559', '2012-10-22 12:33:51', 'admin', 'login');
+INSERT INTO log VALUES ('560', '2012-10-22 13:44:32', 'admin', 'login');
+INSERT INTO log VALUES ('561', '2012-10-22 14:32:33', 'admin', 'login');
+INSERT INTO log VALUES ('562', '2012-10-22 16:06:24', 'admin', 'login');
+INSERT INTO log VALUES ('563', '2012-10-22 18:21:49', 'admin', 'login');
+INSERT INTO log VALUES ('564', '2012-10-23 17:00:48', 'admin', 'login');
+INSERT INTO log VALUES ('565', '2012-10-23 17:10:13', 'admin', 'login');
+INSERT INTO log VALUES ('566', '2012-10-23 17:28:42', 'admin', 'login');
+INSERT INTO log VALUES ('567', '2012-10-23 17:34:49', 'admin', 'login');
+INSERT INTO log VALUES ('568', '2012-10-23 18:24:06', 'admin', 'login');
+INSERT INTO log VALUES ('569', '2012-10-24 09:02:44', 'admin', 'login');
+INSERT INTO log VALUES ('570', '2012-10-25 08:45:43', 'admin', 'login');
+INSERT INTO log VALUES ('571', '2012-10-25 10:05:10', 'admin', 'login');
+INSERT INTO log VALUES ('572', '2012-10-25 11:38:40', 'admin', 'login');
+INSERT INTO log VALUES ('573', '2012-10-26 10:25:03', 'admin', 'login');
+INSERT INTO log VALUES ('574', '2012-10-26 11:23:46', 'admin', 'login');
+INSERT INTO log VALUES ('575', '2012-10-26 11:26:13', 'admin', 'Edit po customer 25');
+INSERT INTO log VALUES ('576', '2012-10-26 06:27:19', 'admin', 'logout');
+INSERT INTO log VALUES ('577', '2012-10-26 12:19:13', 'admin', 'login');
+INSERT INTO log VALUES ('578', '2012-10-26 15:28:35', 'admin', 'login');
+INSERT INTO log VALUES ('579', '2012-10-27 20:34:13', 'admin', 'login');
+INSERT INTO log VALUES ('580', '2012-10-27 21:17:04', 'admin', 'Add delivery order 3');
+INSERT INTO log VALUES ('581', '2012-10-27 21:19:35', 'admin', 'Delete delivery order 3');
+INSERT INTO log VALUES ('582', '2012-10-27 16:44:11', 'admin', 'logout');
+INSERT INTO log VALUES ('583', '2012-10-28 13:54:34', 'admin', 'login');
+INSERT INTO log VALUES ('584', '2012-10-28 14:16:03', 'admin', 'Add po 6');
+INSERT INTO log VALUES ('585', '2012-10-28 14:17:03', 'admin', 'Add matin 2');
+INSERT INTO log VALUES ('586', '2012-10-28 09:29:18', 'admin', 'logout');
+INSERT INTO log VALUES ('587', '2012-10-28 16:55:22', 'admin', 'login');
+INSERT INTO log VALUES ('588', '2012-10-28 17:03:40', 'admin', 'tambah data barang SC001');
+INSERT INTO log VALUES ('589', '2012-10-28 17:04:25', 'admin', 'Add initial balance machine & office equipment  2012-10-28 12');
+INSERT INTO log VALUES ('590', '2012-10-28 17:19:36', 'admin', 'Add matin 3');
+INSERT INTO log VALUES ('591', '2012-10-28 17:36:23', 'admin', 'Add outgoing material 5');
+INSERT INTO log VALUES ('592', '2012-10-28 17:39:39', 'admin', 'Edit initial balance machine & office equipment  2012-10-28 12');
+INSERT INTO log VALUES ('593', '2012-10-28 17:42:47', 'admin', 'Add stock opname 3');
+INSERT INTO log VALUES ('594', '2012-10-28 17:43:50', 'admin', 'Add stock adjustment 4');
+INSERT INTO log VALUES ('595', '2012-10-28 18:50:40', 'admin', 'login');
+INSERT INTO log VALUES ('596', '2012-10-28 18:51:03', 'admin', 'Edit initial balance machine & office equipment  2012-10-27 12');
+INSERT INTO log VALUES ('597', '2012-10-28 19:07:33', 'admin', 'Delete initial balance machine & office equipment 2012-09-30 12');
+INSERT INTO log VALUES ('598', '2012-10-28 19:08:33', 'admin', 'Add initial balance machine & office equipment 1 2012-10-28 12');
+INSERT INTO log VALUES ('599', '2012-10-28 19:11:42', 'admin', 'Edit initial balance machine & office equipment  2012-10-28 12');
+INSERT INTO log VALUES ('600', '2012-10-28 19:12:41', 'admin', 'Add stock adjustment 4');
+INSERT INTO log VALUES ('601', '2012-10-28 19:20:41', 'admin', 'Edit initial balance machine & office equipment  2012-10-15 3');
+INSERT INTO log VALUES ('602', '2012-10-28 19:21:01', 'admin', 'Edit initial balance machine & office equipment  2012-10-15 5');
+INSERT INTO log VALUES ('603', '2012-10-28 19:22:32', 'admin', 'Edit matin 2');
+INSERT INTO log VALUES ('604', '2012-10-28 19:24:40', 'admin', 'Add outgoing material 6');
+INSERT INTO log VALUES ('605', '2012-10-28 19:26:34', 'admin', 'Edit stock opname 3');
+INSERT INTO log VALUES ('606', '2012-10-28 19:27:07', 'admin', 'Add stock adjustment 4');
+INSERT INTO log VALUES ('607', '2012-10-28 14:12:19', 'admin', 'logout');
+INSERT INTO log VALUES ('608', '2012-10-29 08:06:12', 'admin', 'login');
+INSERT INTO log VALUES ('609', '2012-10-29 10:53:09', 'admin', 'login');
+INSERT INTO log VALUES ('610', '2012-10-29 11:16:19', 'admin', 'login');
 
 -- ----------------------------
 -- Table structure for `mat_group`
@@ -1879,6 +1733,9 @@ CREATE TABLE `mat_incdet` (
 -- Records of mat_incdet
 -- ----------------------------
 INSERT INTO mat_incdet VALUES ('1', '1', 'ALME0002', '200.00', '100.00');
+INSERT INTO mat_incdet VALUES ('2', '1', 'M001', '100.00', '200.00');
+INSERT INTO mat_incdet VALUES ('2', '2', 'P001', '200.00', '100.00');
+INSERT INTO mat_incdet VALUES ('3', '1', 'SC001', '40.00', '0.00');
 
 -- ----------------------------
 -- Table structure for `mat_inchdr`
@@ -1901,12 +1758,14 @@ CREATE TABLE `mat_inchdr` (
   `tot_amount` decimal(12,2) DEFAULT NULL,
   `notes` varchar(80) NOT NULL DEFAULT '' COMMENT 'Catatan dari Kedatangan Barang',
   PRIMARY KEY (`matin_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='Header Incoming Material';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COMMENT='Header Incoming Material';
 
 -- ----------------------------
 -- Records of mat_inchdr
 -- ----------------------------
 INSERT INTO mat_inchdr VALUES ('1', '1', '001', '2012-08-06', 'USD', '5', '0', 'PT. ALUMINDO LIGHT METAL INDUSTRY', 'do001', '', '5', null, '0', null, '3');
+INSERT INTO mat_inchdr VALUES ('2', '0', '002', '2012-10-28', 'Rp', '6', '0', 'PT. DIHEN BERSAMA', '003', '', '8', null, '0', null, 'Just a test');
+INSERT INTO mat_inchdr VALUES ('3', '2', '003', '2012-10-28', '', '0', '0', '', '', '', '0', null, '0', null, 'tes scrap');
 
 -- ----------------------------
 -- Table structure for `mat_opnamedet`
@@ -1931,6 +1790,9 @@ CREATE TABLE `mat_opnamedet` (
 INSERT INTO mat_opnamedet VALUES ('1', '1', '123', '50.00', '105.00', '55.00', '0.00', '55.00');
 INSERT INTO mat_opnamedet VALUES ('2', '1', 'ALME0002', '60.00', '-100.00', '160.00', '160.00', '0.00');
 INSERT INTO mat_opnamedet VALUES ('2', '2', 'ALME0003', '900.00', '0.00', '900.00', '900.00', '0.00');
+INSERT INTO mat_opnamedet VALUES ('3', '1', 'SC001', '30.00', '40.00', '10.00', '0.00', '10.00');
+INSERT INTO mat_opnamedet VALUES ('3', '2', 'M001', '5.00', '10.00', '5.00', '0.00', '5.00');
+INSERT INTO mat_opnamedet VALUES ('3', '3', 'P001', '5.00', '5.00', '0.00', '0.00', '0.00');
 
 -- ----------------------------
 -- Table structure for `mat_opnamehdr`
@@ -1943,14 +1805,16 @@ CREATE TABLE `mat_opnamehdr` (
   `mat_type` enum('0','1','2') DEFAULT NULL COMMENT '0= Finished Goods, 1= material, 2=wip',
   `tot_qty` decimal(12,2) DEFAULT NULL,
   `status` enum('0','1') DEFAULT '0' COMMENT '0=opname,1=adjust',
+  `notes` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`opname_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of mat_opnamehdr
 -- ----------------------------
-INSERT INTO mat_opnamehdr VALUES ('1', '2012-09-12', '3', '0', '50.00', '1');
-INSERT INTO mat_opnamehdr VALUES ('2', '2012-09-12', '1', '1', '960.00', '1');
+INSERT INTO mat_opnamehdr VALUES ('1', '2012-09-12', '3', '0', '50.00', '1', null);
+INSERT INTO mat_opnamehdr VALUES ('2', '2012-09-12', '1', '1', '960.00', '1', null);
+INSERT INTO mat_opnamehdr VALUES ('3', '2012-10-28', '1', '1', '40.00', '1', '');
 
 -- ----------------------------
 -- Table structure for `mat_outdet`
@@ -1971,6 +1835,9 @@ CREATE TABLE `mat_outdet` (
 -- ----------------------------
 INSERT INTO mat_outdet VALUES ('3', '1', 'ALME0002', '500.00');
 INSERT INTO mat_outdet VALUES ('4', '1', 'ALME0002', '500.00');
+INSERT INTO mat_outdet VALUES ('5', '1', 'SC001', '10.00');
+INSERT INTO mat_outdet VALUES ('6', '1', 'M001', '100.00');
+INSERT INTO mat_outdet VALUES ('6', '2', 'P001', '200.00');
 
 -- ----------------------------
 -- Table structure for `mat_outhdr`
@@ -1991,13 +1858,15 @@ CREATE TABLE `mat_outhdr` (
   `KdJnsDok` tinyint(1) DEFAULT NULL,
   `CAR` varchar(6) DEFAULT NULL,
   PRIMARY KEY (`matout_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COMMENT='Header Transaksi Outgoing Material';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='Header Transaksi Outgoing Material';
 
 -- ----------------------------
 -- Records of mat_outhdr
 -- ----------------------------
 INSERT INTO mat_outhdr VALUES ('3', '0', '001', '2012-08-08', '3', null, null, '0', '0', '500.00', 'tes', null, null);
 INSERT INTO mat_outhdr VALUES ('4', '3', '001', '2012-09-26', '0', '3', '001', '0', '0', '500.00', '', null, null);
+INSERT INTO mat_outhdr VALUES ('5', '2', '002', '2012-10-28', '0', null, null, '0', '0', '10.00', 'Tes scrap out', null, null);
+INSERT INTO mat_outhdr VALUES ('6', '2', '003', '2012-10-28', '0', null, null, '0', '0', '300.00', '', null, null);
 
 -- ----------------------------
 -- Table structure for `mat_stockcard`
@@ -2006,7 +1875,7 @@ DROP TABLE IF EXISTS `mat_stockcard`;
 CREATE TABLE `mat_stockcard` (
   `kd_fac` char(2) NOT NULL COMMENT 'Kode Factory',
   `wh_id` int(10) NOT NULL COMMENT 'Warehouse ID',
-  `mat_type` enum('0','1','2') NOT NULL COMMENT '0= Finished Goods, 1= material, 2=wip',
+  `mat_type` tinyint(2) NOT NULL,
   `mat_id` varchar(20) NOT NULL DEFAULT '0' COMMENT 'ID Material',
   `date` date NOT NULL COMMENT 'Tanggal dan Waktu Transaksi',
   `type` char(1) NOT NULL DEFAULT 'B' COMMENT 'B=Begining,I=Incoming,O=Outgoing,R=Retur,D=Damage/Missing',
@@ -2020,12 +1889,26 @@ CREATE TABLE `mat_stockcard` (
 -- ----------------------------
 -- Records of mat_stockcard
 -- ----------------------------
-INSERT INTO mat_stockcard VALUES ('01', '3', '0', '123', '2012-08-31', 'B', '250.00', '0.000', '250', '0.000');
-INSERT INTO mat_stockcard VALUES ('01', '2', '2', 'WIP1', '2012-09-11', 'B', '22.00', '0.000', '22', '0.000');
-INSERT INTO mat_stockcard VALUES ('01', '2', '2', 'WIP1', '2012-11-30', 'I', '123.00', '0.000', '123', '0.000');
-INSERT INTO mat_stockcard VALUES ('01', '3', '0', '3K01064500A0-0001', '2012-09-03', 'I', '20.00', '0.000', '20', '0.000');
-INSERT INTO mat_stockcard VALUES ('01', '1', '1', 'ALME0002', '2012-07-31', 'B', '200.00', '0.000', '200', '0.000');
-INSERT INTO mat_stockcard VALUES ('01', '3', '0', '123', '2012-09-03', 'I', '55.00', '0.000', '55', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '1', 'ALME0001', '2012-10-17', 'B', '100.00', '0.000', '100', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '1', 'ALME0002', '2012-10-17', 'B', '200.00', '0.000', '200', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '1', 'ALME0003', '2012-10-17', 'B', '300.00', '0.000', '300', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '3', '0', '123', '2012-10-17', 'B', '50.00', '0.000', '50', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '3', '0', '501-08-1', '2012-10-17', 'B', '100.00', '0.000', '100', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '3', '0', 'LV449720', '2012-10-17', 'B', '450.00', '0.000', '450', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '2', '11', 'WIP1', '2012-10-18', 'B', '25.00', '0.000', '25', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '2', '11', 'WIP2', '2012-10-18', 'B', '50.00', '0.000', '50', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '2', '11', 'WIP4', '2012-10-18', 'B', '75.00', '0.000', '75', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '3', 'M002', '2012-09-30', 'B', '20.00', '0.000', '20', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '3', 'M001', '2012-09-30', 'B', '10.00', '0.000', '10', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '5', 'P002', '2012-09-30', 'B', '10.00', '0.000', '10', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '5', 'P001', '2012-09-30', 'B', '5.00', '0.000', '5', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '2', '11', 'WIP1', '2012-10-18', 'I', '222.00', '0.000', '222', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '2', '11', 'WIP1', '2012-10-18', 'O', '2.00', '0.000', '2', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '3', '0', '123', '2012-10-18', 'I', '100.00', '0.000', '100', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '12', 'SC001', '2012-10-28', 'B', '10.00', '0.000', '10', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '12', 'SC001', '2012-09-30', 'B', '10.00', '0.000', '10', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '3', 'M003', '2012-09-30', 'B', '30.00', '0.000', '30', '0.000');
+INSERT INTO mat_stockcard VALUES ('01', '1', '5', 'P003', '2012-09-30', 'B', '15.00', '0.000', '15', '0.000');
 
 -- ----------------------------
 -- Table structure for `mat_warehouse`
@@ -2197,7 +2080,7 @@ CREATE TABLE `mkt_sorderdet` (
 -- ----------------------------
 -- Records of mkt_sorderdet
 -- ----------------------------
-INSERT INTO mkt_sorderdet VALUES ('25', '1', '123', '1', '2.000');
+INSERT INTO mkt_sorderdet VALUES ('25', '1', '123', '300', '2.000');
 
 -- ----------------------------
 -- Table structure for `mkt_sorderhdr`
@@ -2219,7 +2102,7 @@ CREATE TABLE `mkt_sorderhdr` (
 -- ----------------------------
 -- Records of mkt_sorderhdr
 -- ----------------------------
-INSERT INTO mkt_sorderhdr VALUES ('25', '002', '2012-09-11', 'DENON', 'USD', '2012-09-13', '1.00', '2.00', '');
+INSERT INTO mkt_sorderhdr VALUES ('25', '002', '2012-09-11', 'DENON', 'USD', '2012-09-13', '300.00', '600.00', '1222');
 
 -- ----------------------------
 -- Table structure for `mst_bank`
@@ -2325,8 +2208,15 @@ INSERT INTO mst_barang VALUES ('APH44100', '0', null, null, '-', '-', null, null
 INSERT INTO mst_barang VALUES ('KPFB-026', '0', null, null, null, '-', null, null, null, null, null, null, null, null, null, 'PCE', null, '', '', 'KAWAI  musical');
 INSERT INTO mst_barang VALUES ('LUS23003', '0', null, null, null, '-', null, null, null, null, null, null, null, null, null, 'PCE', null, '', '', 'SHIKOKU');
 INSERT INTO mst_barang VALUES ('LV449720', '0', null, null, 'FG3', '-', null, null, null, null, null, null, null, null, null, 'PCE', '0.00', '', '', 'JVC');
+INSERT INTO mst_barang VALUES ('M001', '3', null, null, 'Mesin A', '0000', null, null, null, null, null, null, null, null, null, 'PCS', '500000.00', null, 'tes', null);
+INSERT INTO mst_barang VALUES ('M002', '3', null, null, 'Mesin B', '0002', null, null, null, null, null, null, null, null, null, 'PCS', '900000.00', null, 'tes2', null);
+INSERT INTO mst_barang VALUES ('M003', '3', null, null, 'Mesin C', '0003', null, null, null, null, null, null, null, null, null, 'PCS', '1000000.00', null, 'tes3\r\n', null);
+INSERT INTO mst_barang VALUES ('P001', '5', null, null, 'PC', '0001', null, null, null, null, null, null, null, null, null, 'PCS', '2500000.00', null, 'tesA', null);
+INSERT INTO mst_barang VALUES ('P002', '5', null, null, 'Printer', '0002', null, null, null, null, null, null, null, null, null, 'PCS', '700000.00', null, 'tes B', null);
+INSERT INTO mst_barang VALUES ('P003', '5', null, null, 'Telepon', '0003', null, null, null, null, null, null, null, null, null, 'PCS', '250000.00', null, 'tes C', null);
+INSERT INTO mst_barang VALUES ('SC001', '12', null, null, 'Scrap Satu', '0101', null, null, null, null, null, null, null, null, null, 'PCS', '50.00', null, 'tes', null);
 INSERT INTO mst_barang VALUES ('TUC4N073', '0', null, null, null, '-', null, null, null, null, null, null, null, null, null, 'PCE', null, '', '', 'PT. PANASONIC MANUFACTURING INDONESIA (PMI)');
-INSERT INTO mst_barang VALUES ('WIP1', '11', null, '1', '111', '-', null, null, null, null, null, null, null, null, null, 'PCS', null, '1', '1', '');
+INSERT INTO mst_barang VALUES ('WIP1', '11', null, '1', '111', '-', null, null, null, null, null, null, null, null, null, 'PCS', null, '1', '1', 'IWAI AMERICA');
 INSERT INTO mst_barang VALUES ('WIP2', '11', null, null, null, '-', null, null, null, null, null, null, null, null, null, 'PCE', null, '2', '2', '');
 INSERT INTO mst_barang VALUES ('WIP3', '11', null, null, null, '-', null, null, null, null, null, null, null, null, null, 'PCE', null, '3', '3', '');
 INSERT INTO mst_barang VALUES ('WIP4', '11', null, null, 'Barang WIP', '-', null, null, null, null, null, null, null, null, null, 'ACR', '1500.00', null, 'tes', null);
@@ -2483,7 +2373,7 @@ INSERT INTO mst_in_type VALUES ('2', 'From Production');
 -- ----------------------------
 DROP TABLE IF EXISTS `mst_jenisbarang`;
 CREATE TABLE `mst_jenisbarang` (
-  `KdJnsBarang` tinyint(1) NOT NULL DEFAULT '0',
+  `KdJnsBarang` tinyint(2) NOT NULL DEFAULT '0',
   `JnsBarang` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`KdJnsBarang`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -2503,6 +2393,7 @@ INSERT INTO mst_jenisbarang VALUES ('8', 'Brg Contoh/Test');
 INSERT INTO mst_jenisbarang VALUES ('9', 'Lainnya');
 INSERT INTO mst_jenisbarang VALUES ('10', 'Lebih dr 1 Jenis Brg');
 INSERT INTO mst_jenisbarang VALUES ('11', 'WIP');
+INSERT INTO mst_jenisbarang VALUES ('12', 'Scrap');
 
 -- ----------------------------
 -- Table structure for `mst_jenisekspor`
@@ -2670,7 +2561,8 @@ CREATE TABLE `mst_perusahaan` (
   `Negara` varchar(20) DEFAULT NULL,
   `fax` varchar(30) DEFAULT NULL,
   `tlp` varchar(30) DEFAULT NULL,
-  `Status` varchar(2) DEFAULT NULL,
+  `Status` int(1) DEFAULT NULL,
+  `StatusKB` enum('KB','Non KB') DEFAULT NULL,
   `NoTpb` varchar(50) DEFAULT NULL,
   `TgTpb` date DEFAULT NULL,
   `Niper` varchar(50) DEFAULT NULL,
@@ -2694,44 +2586,44 @@ CREATE TABLE `mst_perusahaan` (
 -- ----------------------------
 -- Records of mst_perusahaan
 -- ----------------------------
-INSERT INTO mst_perusahaan VALUES ('CLARION', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('DAITOH', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('DENON', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('HITACHI', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('IMF', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('IWAI AMERICA', 'c', '', '-', null, '', '', 'CN', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('JVC', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('KASEN', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('KAWAI  musical', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('KENWOOD', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('KEPSONIC', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('LIMA TEKNO INDONESIA', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('MABEL', 'c', '', '-', null, '', '', 'ID', '', '', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PARAMOUNT BED', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PHILLIPS S\'pore/Sumi', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PIONEER', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. AIWA Dharmala', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. ALUMINDO LIGHT METAL INDUSTRY', 's', '', 'Jl. Kembang Jepun 38 - 40', null, 'Surabaya  60162', '', 'ID', '031 - 3542609', '', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. DIHEN BERSAMA', 's', '', 'Jl. P. Jayakarta 66/23A', null, 'Jakarta 10730', 'Jawa Barat', 'ID', '( 021 ) 6289517', '6593339', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. INDAL ALUMINIUM INDUSTRY - DIV. ISS', 's', '', 'Desa Sawotratap, Gedangan', null, 'Sidoarjo 61254', '', 'ID', '( 031 ) 8532812 (SURABAYA)', '(031) 8531531 , (031) 8536993 ', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. MAG Citra', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. MATSUSHITA Gobel', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. MATSUSHITA Kotobuki', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. PANASONIC MANUFACTURING INDONESIA (PMI)', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. POLYTRON', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. SANKEN Electronics', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. SIIX', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. TOA Galva Industries & GALINDRA', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. YAMAHA  Electronics', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. YAMAHA Music', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('PT. YAN JIN INDONESIA', 'o', '01.061.837.9-057.000', 'Kawasan EJIP Industrial Park Plot 8H Cikarang Selatan', null, 'Bekasi', 'Jawa Barat', 'Indonesia', null, null, 'P', '865/KM.4/2010', '2010-05-19', '_', '102747857', '2004-02-17', 'Mr. Y. Tobusawa', null, null, null, '2', '536/APIT/198', '000000', '000192', '001269', '050800', null, null);
-INSERT INTO mst_perusahaan VALUES ('SANYO Electronics', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('SHIKOKU', 'c', '', '-', null, '', '', 'ID', '', '', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('SMID', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('SONY CORPORATION', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('TOSHIBA', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('TOSHIBA GREEN MATERIAL', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
-INSERT INTO mst_perusahaan VALUES ('TOTO', 'c', '', '-', null, '', '', 'ID', null, null, '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('CLARION', 'c', '-', '-', null, '', '', 'ID', '', '', '0', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('DAITOH', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('DENON', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('HITACHI', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('IMF', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('IWAI AMERICA', 'c', '', '-', null, '', '', 'CN', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('JVC', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('KASEN', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('KAWAI  musical', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('KENWOOD', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('KEPSONIC', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('LIMA TEKNO INDONESIA', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('MABEL', 'c', '', '-', null, '', '', 'ID', '', '', '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PARAMOUNT BED', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PHILLIPS S\'pore/Sumi', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PIONEER', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. AIWA Dharmala', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. ALUMINDO LIGHT METAL INDUSTRY', 's', '', 'Jl. Kembang Jepun 38 - 40', null, 'Surabaya  60162', '', 'ID', '031 - 3542609', '', '31', '', '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. DIHEN BERSAMA', 's', '', 'Jl. P. Jayakarta 66/23A', null, 'Jakarta 10730', 'Jawa Barat', 'ID', '( 021 ) 6289517', '6593339', '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. INDAL ALUMINIUM INDUSTRY - DIV. ISS', 's', '', 'Desa Sawotratap, Gedangan', null, 'Sidoarjo 61254', '', 'ID', '( 031 ) 8532812 (SURABAYA)', '(031) 8531531 , (031) 8536993 ', '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. MAG Citra', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. MATSUSHITA Gobel', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. MATSUSHITA Kotobuki', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. PANASONIC MANUFACTURING INDONESIA (PMI)', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. POLYTRON', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. SANKEN Electronics', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. SIIX', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. TOA Galva Industries & GALINDRA', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. YAMAHA  Electronics', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. YAMAHA Music', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('PT. YAN JIN INDONESIA', 'o', '01.061.837.9-057.000', 'Kawasan EJIP Industrial Park Plot 8H Cikarang Selatan', null, 'Bekasi', 'Jawa Barat', 'Indonesia', null, null, '0', null, '865/KM.4/2010', '2010-05-19', '_', '102747857', '2004-02-17', 'Mr. Y. Tobusawa', null, null, null, '2', '536/APIT/198', '000000', '000192', '001269', '050800', null, null);
+INSERT INTO mst_perusahaan VALUES ('SANYO Electronics', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('SHIKOKU', 'c', '', '-', null, '', '', 'ID', '', '', '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('SMID', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('SONY CORPORATION', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('TOSHIBA', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('TOSHIBA GREEN MATERIAL', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
+INSERT INTO mst_perusahaan VALUES ('TOTO', 'c', '', '-', null, '', '', 'ID', null, null, '0', null, '', null, '', null, null, '', null, '', '0000-00-00', null, null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `mst_status`
@@ -2901,6 +2793,8 @@ CREATE TABLE `pur_podet` (
 INSERT INTO pur_podet VALUES ('3', '1', 'TESMAT-2', '2.00', '2.00');
 INSERT INTO pur_podet VALUES ('4', '1', 'TESMAT-1', '1.00', '2.00');
 INSERT INTO pur_podet VALUES ('5', '1', 'ALME0002', '200.00', '100.00');
+INSERT INTO pur_podet VALUES ('6', '1', 'M001', '100.00', '200.00');
+INSERT INTO pur_podet VALUES ('6', '2', 'P001', '200.00', '100.00');
 
 -- ----------------------------
 -- Table structure for `pur_pohdr`
@@ -2933,7 +2827,7 @@ CREATE TABLE `pur_pohdr` (
   `remark` varchar(50) DEFAULT NULL,
   `auth_sign` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`po_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1 COMMENT='Header Transaksi Pesanan Material ke Supplier';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COMMENT='Header Transaksi Pesanan Material ke Supplier';
 
 -- ----------------------------
 -- Records of pur_pohdr
@@ -2941,6 +2835,7 @@ CREATE TABLE `pur_pohdr` (
 INSERT INTO pur_pohdr VALUES ('3', '1', '1', '2012-08-31', '2', '222', 'PT. ALUMINDO LIGHT METAL INDUSTRY', '2', 'USD', '2012-08-31 00:00:00', '1', '2', '0.00', '0.00', '0.00', '1.00', '0.00', null, '1', '1', '1', '1', '1', '2', '2');
 INSERT INTO pur_pohdr VALUES ('4', '1', '2', '2012-08-31', '1', '111', 'PT. INDAL ALUMINIUM INDUSTRY - DIV. ISS', '1', 'USD', '2012-08-31 00:00:00', '1', '1', '0.00', '0.00', '0.00', '2.00', '0.00', null, '2', '2', '1', '1', '1', '2', '2');
 INSERT INTO pur_pohdr VALUES ('5', '0', '001', '2012-08-06', null, null, 'PT. ALUMINDO LIGHT METAL INDUSTRY', '1', 'USD', '2012-09-13 00:00:00', '1', '3', '0.00', '0.00', '0.00', '10.00', '0.00', null, '2', '4', '6', '7', '9', '8', '10');
+INSERT INTO pur_pohdr VALUES ('6', '0', '002', '2012-10-28', null, null, 'PT. DIHEN BERSAMA', 'Kikin', 'Rp', '2012-10-31 00:00:00', '0', 'Just a test', '0.00', '0.00', '0.00', '10.00', '0.00', null, 'tes', '', '', '', '0', '', '');
 
 -- ----------------------------
 -- Table structure for `satuan`

@@ -1,6 +1,11 @@
 <script type="text/javascript">
 $(function(){
 
+$('#ref').hide();
+
+$('#ref_id').combogrid({  
+	panelWidth:500
+});
 
 $('#w').window({ 
 	title:"FORM <?php echo strtoupper($NmMenu) ?>", 
@@ -32,7 +37,9 @@ $('#btnTbh').click(function(){
 	enInput();
 	setdg();
 	setdg2();	
-	$('#KdKpbcTuj').focus();	
+	$('#KdKpbcTuj').focus();
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);	
 });
  
 $('#btnUbh').click(function(){
@@ -41,6 +48,8 @@ $('#btnUbh').click(function(){
 	
 	enInput();	
 	enTgl();
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);
 });
   
 $('#btnSim').click(function(){
@@ -109,6 +118,11 @@ $('#CAR').mask("999.999");
 $('#NoDaf').mask("999.999");
 $('#NoSegel').mask("999.999");
 dsInput();
+
+$('#KdTp').change(function(){
+	$('#ref_id').combogrid('setValue','');
+	setRef();
+});
 
     
 });//Akhir Document Ready

@@ -178,11 +178,13 @@ $html = '<h2 align="center">'.$NmMenu.'</h2>'.
 		  <th width="30"><b>Unit</b></th>
 		  <th align="right"><b>Qty. PO</b></th>
 		  <th align="right"><b>Qty. DO</b></th>
+		  <th align="right"><b>Qty. Balane</b></th>
 		</tr>
 		</thead>
 		<tbody>';
 $no=1;
 foreach ($rs as $r){
+$qty_bal=str_replace(",","",$r['qty'])-str_replace(",","",$r['qty_do']);
 $html .= '<tr>'.
 	  	 '<td align="center" width="25">'.$no.'</td>'.
 		 '<td width="80">'.$r['KdBarang2'].'</td>'.
@@ -191,6 +193,7 @@ $html .= '<tr>'.
 		 '<td width="30">'.$r['Sat2'].'</td>'.
 		 '<td align="right">'.$r['qty'].'</td>'.
 		 '<td align="right">'.$r['qty_do'].'</td>'.
+		 '<td align="right">'.number_format($qty_bal,2).'</td>'.		 
 		 '</tr>';
 $no+=1;	
 }

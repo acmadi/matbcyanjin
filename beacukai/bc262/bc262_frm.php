@@ -49,6 +49,10 @@ require_once "bc262.cjs.php";
 <form id="frm" name="frm" action="" method="post">
     <div class="easyui-tabs" tools="#tab-tools" style="width:720px;height:470px;">               
         <div title="Data Umum" style="padding:10px;">
+        <div id="ref">
+          Ref No. <select id="ref_id" name="ref_id"></select>
+        </div>
+        
         <table>        
         <tr>        
           <td>                 	        	        

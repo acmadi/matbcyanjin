@@ -1,6 +1,21 @@
 <script type="text/javascript">
 $(function(){
 	
+$('#ref').hide();
+$('#ref_id').combogrid({  
+	panelWidth:500,  	
+	idField:'matout_id',  
+	textField:'matout_no',  
+	url: '<?php echo $basedir ?>models/bc261/bc261_grid.php?req=outhdr',  
+	fitColumns:true,  
+	columns:[[  
+		{field:'matout_no',title:'Outgoing No.',width:60},
+		{field:'matout_date',title:'Outgoing Date',width:50},
+		{field:'matout_name',title:'Outgoing Type',width:50},
+		{field:'wo_no',title:'WO No.',width:50}
+	]],
+	onClickRow:function(index,row){setdg2Url(row)}  
+});
 	
 $('#w').window({ 
 	title:"FORM <?php echo strtoupper($NmMenu) ?>", 
@@ -36,14 +51,18 @@ $('#btnTbh').click(function(){
 	setdg3();
 				
 	$('#KdKpbcTuj').focus();	
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);
 });
  
 $('#btnUbh').click(function(){
-		enbtnSim();			
-		dsbtnHps();
-		
-		enInput();	
-		enTgl();
+	enbtnSim();			
+	dsbtnHps();
+	
+	enInput();	
+	enTgl();
+	$('#ref').show();
+	$('#KdBarang').attr("disabled",true);
 });
   
 $('#btnSim').click(function(){

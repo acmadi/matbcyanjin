@@ -40,7 +40,14 @@ function setdg(){
 					{field:'NmBarang2',title:'Part Name',width:100}, 
 					{field:'Sat2',title:'Unit',width:80},   
 					{field:'qty',title:'Qty. PO Cust.',width:100,align:'right'},  
-					{field:'qty_do',title:'Qty. DO',width:100,align:'right'}    
+					{field:'qty_do',title:'Qty. DO',width:100,align:'right'},
+					{field:'qty_bal',title:'Qty. Balance',width:100,align:'right',formatter: function(value,row,index){				
+					qty=parseFloat(row.qty.replace(',',''));
+					qty_do=parseFloat(row.qty_do.replace(',',''));
+					qty_bal=qty-qty_do;
+					
+					return qty_bal.toFixed(2);
+				}}      
 				]],  
 				onResize:function(){  
 					$('#dg').datagrid('fixDetailRowHeight',index);  
