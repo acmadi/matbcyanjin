@@ -72,8 +72,8 @@
 				"children":[{  
 					"text":"<a href=\"material/matout_frm.php?NmMenu=Outgoing Material\" target=\"content\">Outgoing Material (OUT)</a>"
 				},{ 
-					"text":"<a href=\"material/scrap_out_frm.php?NmMenu=Scrap Out&type=O\" target=\"content\">Scrap Out</a>"						
-				},{
+					"text":"<a href=\"material/scrap_out_frm.php?NmMenu=Scrap Out&type=O\" target=\"content\">Scrap Out</a>"							
+				},{ 
 					"text":"<a href=\"material/wip_frm.php?NmMenu=WIP Out&type=O\" target=\"content\">WIP Out</a>"						
 				},{ 			 
 					"text":"<a href=\"material/do_frm.php?NmMenu=Delivery Order\" target=\"content\">Delivery Order (DO)</a>"				

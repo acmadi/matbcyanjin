@@ -40,6 +40,7 @@ if(isset($_REQUEST['fUserName'])){
 					  
 			  $_SESSION["userName"]= $row['nama_user'];
 			  $_SESSION["pass"]= $row['pass'];	
+			  $_SESSION["grup"]= $row['grup'];
 			  
 			  $qc= "SELECT * FROM mst_perusahaan WHERE TpPrshn='o' LIMIT 1";
 			  $runc = $pdo->query($qc);

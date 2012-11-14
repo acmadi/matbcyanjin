@@ -10,7 +10,8 @@ function setdg(){
 		columns:[[  
 			{field:'nama_user0',title:'nama_user0',width:80,hidden:true},
 			{field:'nama_user',title:'Nama User',width:80},
-			{field:'pass',title:'Password',width:300}
+			{field:'pass',title:'Password',width:300},
+			{field:'grup',title:'Grup',width:300}
 		]],
 		url: '<?php echo $basedir; ?>models/user/user_grid.php',  
 		saveUrl: '',  

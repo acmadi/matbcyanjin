@@ -9,6 +9,7 @@ require_once "function.php";
 $nama_user0=$_REQUEST['nama_user0'];
 $nama_user=$_REQUEST['nama_user'];
 $pass=$_REQUEST['pass'];
+$grup=$_REQUEST['grup'];
 // perlu dibuat sebarang pengacak
 $pengacak  = "K1234I4321K5678I8765N5891";
 
@@ -30,9 +31,9 @@ try {
 		$rstuj = $rec->fetchAll(PDO::FETCH_ASSOC);
 		if (count($rstuj) == 0){
 			$sql[]="INSERT INTO user (	
-					  nama_user,pass
+					  nama_user,pass,grup
 					) VALUES (
-					  '$nama_user','$pass'
+					  '$nama_user','$pass','$grup'
 					)";
 			
 			$ketlog="tambah data $NmMenu $nama_user";
@@ -45,7 +46,9 @@ try {
 	} else if ($aksi=='u'){
 		//UBAH
 		$sql[]="UPDATE user SET 
-				nama_user='$nama_user',pass='$pass'
+				nama_user='$nama_user',
+				pass='$pass',
+				grup='$grup'
 				WHERE nama_user='$nama_user0'";
 		
 		$ketlog="ubah data $NmMenu $nama_user0";

@@ -50,6 +50,19 @@ require_once "mst_frm.cjs.php";
       <td>Password</td>
       <td><input name="pass" type="password" class="easyui-validatebox" id="pass" value="" size="50"></td>
     </tr>
+    <tr>
+      <td>Level</td>
+      <td>
+      <select name="grup" id="grup">
+        <option value=""></option>
+        <option value="admin">Admin</option>
+        <option value="gudang">Gudang</option>
+        <option value="exim">Exim</option>
+        <option value="bc">BC</option>
+        <option value="eksekutif">Eksekutif</option>
+      </select>
+      </td>
+    </tr>
     </table>
     <input type="submit" id="btnSubmit" name="btnSubmit" style="display:none">
     </form>            
