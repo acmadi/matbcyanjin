@@ -1,7 +1,4 @@
 <?php 
-require_once "models/abspath.php";
-require_once "sessions.php";
-
 $grp=$_SESSION['grup']; 
 switch ($grp){
 	case "admin"://< jika /folder_root/

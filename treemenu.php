@@ -1,3 +1,7 @@
+<?php 
+require_once "models/abspath.php";
+require_once "sessions.php";
+?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
@@ -40,7 +44,6 @@ span:hover		{
 disableSelection(document.body); 
 </script>
 <?php 
-require_once "models/abspath.php";
 require_once "treemenu.cjs.php";
 ?>
 </head>
