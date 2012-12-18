@@ -7,7 +7,7 @@ $nama_user=$_SESSION['userName'];
 ?>
 <html>
 <head>
-<title>MATERIAL CONTROL & BEA CUKAI  SYSTEM</title>  
+<title>INVENTORY & BEA CUKAI  SYSTEM</title>  
 <link rel="shortcut icon" href="themes/icons/favicon.png" >
 <link rel="stylesheet" type="text/css" href="<?php echo $basedir; ?>themes/default/easyui.css">
 <style type="text/css">

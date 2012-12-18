@@ -62,6 +62,10 @@ require_once "mst_frm.cjs.php";
       <td><input name="NmBarang" type="text" id="NmBarang" class="easyui-validatebox" value="" size="30" maxlength="30" required></td>
     </tr>
     <tr>
+      <td>Section</td>
+      <td><input name="twhmp" type="text" id="twhmp" class="easyui-validatebox" value="" size="25"></td>
+    </tr>
+    <tr>
       <td>Hs No.</td>
       <td><input name="HsNo" type="text" id="HsNo" class="easyui-validatebox" size="20" required></td>
     </tr>
@@ -96,11 +100,7 @@ require_once "mst_frm.cjs.php";
     <tr>
       <td>Finish</td>
       <td><input name="Finish" type="text" id="Finish" class="easyui-validatebox" value="" size="20"></td>
-    </tr>
-    <tr>
-      <td>t x w x h x m x p</td>
-      <td><input name="twhmp" type="text" id="twhmp" class="easyui-validatebox" value="" size="25"></td>
-    </tr>    
+    </tr>        
     <tr>
       <td>Unit</td>
       <td>

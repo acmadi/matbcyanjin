@@ -48,11 +48,15 @@ require_once "bc40.cjs.php";
 <div id="w" style="padding:5px;">
 <form id="frm" name="frm" action="" method="post">
     <div class="easyui-tabs" tools="#tab-tools" style="width:710px;height:470px;">               
-        <div title="Data Umum" style="padding:10px;">
-        <div id="ref">
-          Ref No. <select id="ref_id" name="ref_id"></select>
+        <div title="Data Umum" style="padding:10px;"> 
+        <div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div>
+        Klik/pilih Pemasok Terlebih dahulu..
+        Setelah itu pilih Ref. No.
         </div>
-
+	</div>
+    
         <table>        
         <tr>        
           <td>                    	        	        
@@ -197,8 +201,11 @@ require_once "bc40.cjs.php";
 					?>
               </select>
               </td>
-              <td width="12%">&nbsp;</td>
-              <td width="38%">&nbsp;</td>
+              <td colspan="2">
+              <div id="ref">
+                  Ref No. <select id="ref_id" name="ref_id"></select>
+                </div>
+              </td>
               </tr>
             </table>
             </fieldset>

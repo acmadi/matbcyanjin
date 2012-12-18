@@ -132,7 +132,7 @@ $html = '<h2>'.$NmMenu.'</h2>
 		<tr>
 		  <th align="center" width="25"><b>No.</b></th>
 		  <th width="80"><b>Part Code</b></th>
-		  <th><b>Part No.</b></th>
+		  <th width="125"><b>Part No.</b></th>
 		  <th width="125"><b>Part Name</b></th>
 		  <th width="70"><b>HS No.</b></th>
 		  <th width="50"><b>Unit</b></th>
@@ -147,7 +147,7 @@ foreach ($rs as $r){
 $html .= '<tr>'.
 	  	 '<td align="center" width="25">'.$no.'</td>'.
 		 '<td width="80">'.$r['KdBarang'].'</td>'.
-		 '<td>'.$r['PartNo'].'</td>'.
+		 '<td width="125">'.$r['PartNo'].'</td>'.
 		 '<td width="125">'.$r['NmBarang'].'</td>'.
 		 '<td width="70">'.$r['HsNo'].'</td>'.
 		 '<td width="50">'.$r['Sat'].'</td>'.

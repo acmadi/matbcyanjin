@@ -13,8 +13,8 @@ function setdg(){
 		]],
 		columns:[[			
 			{field:'TpPrshn',title:'TpPrshn',width:100,hidden:true},
-			{field:'NpwpPrshn',title:'NPWP',width:100},
-			{field:'AlmtPrshn',title:'Alamat',width:100},
+			{field:'NpwpPrshn',title:'NPWP',width:130},
+			{field:'AlmtPrshn',title:'Alamat',width:200},
 			{field:'Kota',title:'Kota',width:100},
 			{field:'Prov',title:'Provinsi',width:100},
 			{field:'Negara',title:'Negara',width:100},

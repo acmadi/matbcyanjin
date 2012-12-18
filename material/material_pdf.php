@@ -136,6 +136,7 @@ $html = '<h2>'.$NmMenu.'</h2>
 		  <th width="80"><b>Mat. Group</b></th>
 		  <th><b>Mat. Code</b></th>
 		  <th width="125"><b>Desc.</b></th>
+		  <th><b>Section</b></th>
 		  <th width="70"><b>HS No.</b></th>
 		  <th width="80"><b>Die No.</b></th>
 		  <th align="right" width="50"><b>UW/m.</b></th>
@@ -145,7 +146,6 @@ $html = '<h2>'.$NmMenu.'</h2>
 		  <th align="right" width="50"><b>Pc/Bar</b></th>
 		  <th align="right" width="50"><b>WBar</b></th>
 		  <th><b>Finish</b></th>
-		  <th><b>twhmp</b></th>
 		  <th><b>Unit</b></th>
 		</tr>
 		</thead>
@@ -157,6 +157,7 @@ $html .= '<tr>'.
 		 '<td width="80">'.$r['matgroup_name'].'</td>'.
 		 '<td>'.$r['KdBarang'].'</td>'.
 		 '<td width="125">'.$r['NmBarang'].'</td>'.
+		 '<td>'.htmlentities($r['twhmp']).'</td>'.
 		 '<td width="70">'.$r['HsNo'].'</td>'.
 		 '<td width="80">'.$r['DieNo'].'</td>'.
 		 '<td align="right" width="50">'.$r['UWm'].'</td>'.
@@ -166,7 +167,6 @@ $html .= '<tr>'.
 		 '<td align="right" width="50">'.$r['PcBar'].'</td>'.
 		 '<td align="right" width="50">'.$r['WBar'].'</td>'.
 		 '<td>'.$r['Finish'].'</td>'.
-		 '<td>'.$r['twhmp'].'</td>'.
 		 '<td>'.$r['Sat'].'</td>'.
 		 '</tr>';
 $no+=1;	

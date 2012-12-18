@@ -13,6 +13,7 @@ function setdg(){
 			{field:'NmBarang',title:'Desc.',width:100},
 		]],
 		columns:[[  			
+			{field:'twhmp',title:'Section',width:80},
 			{field:'HsNo',title:'HS No.',width:100},
 			{field:'DieNo',title:'Die No.',width:80},
 			{field:'UWm',title:'UW/m',width:80},
@@ -21,8 +22,7 @@ function setdg(){
 			{field:'LBar',title:'L/Bar',width:80},
 			{field:'PcBar',title:'Pc/Bar',width:80},
 			{field:'WBar',title:'WBar',width:80},
-			{field:'Finish',title:'Finish',width:80},
-			{field:'twhmp',title:'twhmp',width:80},
+			{field:'Finish',title:'Finish',width:80},			
 			{field:'Sat',title:'Unit',width:40}
 		]],
 		url: '<?php echo $basedir; ?>models/material/material_grid.php?TpBarang=<?php echo $TpBarang; ?>&pilcari='+$("#pilcari").val()+'&txtcari='+$("#txtcari").val()
